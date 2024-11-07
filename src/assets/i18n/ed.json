@@ -1,0 +1,68 @@
+{
+  "AppName": "DUOC Assistance System",
+  "AuthorText": "Entwickelt von:",
+  "Author": "Bastian Cabezas, Zichao Yuan, Saul Vega, Francisca Otarola",
+  "Language": "Sprache",
+  "Language.English": "Englisch",
+  "Language.Spanish": "Spanisch",
+  "Language.German": "Deutsch",
+  
+  "Start.StartNewExperience": "Starte eine neue Erfahrung",
+  
+  "Login.Title.Login": "Einloggen",
+  "Login.Label.Email": "E-Mail",
+  "Login.Placeholder.Email": "Gib hier deine E-Mail ein",
+  "Login.Label.Password": "Passwort",
+  "Login.Placeholder.Password": "Gib hier dein Passwort ein",
+  "Login.Button.Login": "Einloggen",
+  "Login.Button.Signin": "Registrieren",
+  "Login.Button.ForgotPassword": "Passwort vergessen",
+  "Login.Button.DarkMode": "Dunkelmodus",
+
+  "WelcomePage.Title.Wellcome": "Willkommen bei Angry-Dinosaurs!",
+  
+  "HomePage.Button.Wellcome": "Startseite",
+  "HomePage.Button.class": "Meine Klasse",
+  "HomePage.Button.Scan": "Scannen",
+  "HomePage.Button.Dinosaur": "Dinosaurier",
+  "HomePage.Button.Forum": "Forum",
+  
+  "ThemePage.Label.ColorTheme": "Farbthema:",
+  "ThemePage.Color.Light": "Hell",
+  "ThemePage.Color.Dark": "Dunkel",
+  "ThemePage.Color.Green": "Grün",
+  "ThemePage.Color.Red": "Rot",
+  "ThemePage.Color.Facebook": "Facebook",
+  "ThemePage.Color.Instagram": "Instagram",
+  "ThemePage.Color.Duoc": "DUOC",
+  
+  "ThemePage.Button.Primary": "Primärknopf",
+  "ThemePage.Button.Secondary": "Sekundärknopf",
+  "ThemePage.Button.Tertiary": "Tertiärknopf",
+  "ThemePage.Button.Success": "Erfolgsbutton",
+  "ThemePage.Button.Warning": "Warnungstaste",
+  "ThemePage.Button.Danger": "Gefährlicher Knopf",
+  "ThemePage.Button.Light": "Heller Knopf",
+  "ThemePage.Button.Dark": "Dunkler Knopf",
+  "ThemePage.Button.Home": "Startseite",
+  "ThemePage.Button.Logout": "Abmelden",
+  
+  "ThemePage.Card.Title": "Kartentitel",
+  "ThemePage.Card.Subtitle": "Kartenuntertitel",
+  "ThemePage.Card.Content": "Dies ist der Inhalt der Karte. Du kannst die Farben der Karte und ihres Inhalts anpassen.",
+  
+  "ThemePage.List.Title": "Listen",
+  "ThemePage.List.Item1": "Listenpunkt 1",
+  "ThemePage.List.Item2": "Listenpunkt 2",
+  "ThemePage.List.Item3": "Listenpunkt 3",
+  
+  "ThemePage.Calendar.Title": "Kalender",
+  
+  "ThemePage.Form.Title": "Daten eingeben",
+  "ThemePage.Form.NameLabel": "Name",
+  "ThemePage.Form.NamePlaceholder": "Gib deinen Namen ein",
+  "ThemePage.Form.DescriptionLabel": "Beschreibung",
+  "ThemePage.Form.DescriptionPlaceholder": "Schreibe hier eine Beschreibung...",
+  "ThemePage.Form.ToggleLabel": "Benachrichtigungen aktivieren",
+  "ThemePage.Form.CheckboxLabel": "Ich akzeptiere die Bedingungen"
+}

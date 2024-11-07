@@ -1,32 +1,32 @@
 {
-    "AppName": "Sistema de asistencia DUOC",
+    "AppName": "DUOC Assistance System",
     "AuthorText": "Developed by:",
-    "Author": "Bastian Cabezas,Zichao Yuan, Francisca Otarola",
+    "Author": "Bastian Cabezas, Zichao Yuan, Saul Vega, Francisca Otarola",
     "Language": "Language",
     "Language.English": "English",
-    "Language.Spanish": "Español",
-    "Language.Mapudungun": "Mapudungun",
+    "Language.Spanish": "Spanish",
+    "Language.German": "German",
     
     "Start.StartNewExperience": "Start a new experience",
-
+    
     "Login.Title.Login": "Login",
     "Login.Label.Email": "Email",
     "Login.Placeholder.Email": "Enter your email here",
     "Login.Label.Password": "Password",
     "Login.Placeholder.Password": "Enter your password here",
-    "Login.Button.Login": "Login",
+    "Login.Button.Login": "Log In",
     "Login.Button.Signin": "Sign Up",
-    "Login.Button.ForgotPassword": "Forgot my password",
+    "Login.Button.ForgotPassword": "Forgot Password",
     "Login.Button.DarkMode": "Dark Mode",
 
     "WelcomePage.Title.Wellcome": "Welcome to Angry-Dinosaurs!",
-
-    "HomePage.Button.Welcome": "Home",
-    "HomePage.Button.Class": "My Class",
+    
+    "HomePage.Button.Wellcome": "Home",
+    "HomePage.Button.class": "My Class",
     "HomePage.Button.Scan": "Scan",
     "HomePage.Button.Dinosaur": "Dinosaur",
     "HomePage.Button.Forum": "Forum",
-
+    
     "ThemePage.Label.ColorTheme": "Color Theme:",
     "ThemePage.Color.Light": "Light",
     "ThemePage.Color.Dark": "Dark",
@@ -34,7 +34,7 @@
     "ThemePage.Color.Red": "Red",
     "ThemePage.Color.Facebook": "Facebook",
     "ThemePage.Color.Instagram": "Instagram",
-    "ThemePage.Color.Duoc": "Duoc",
+    "ThemePage.Color.Duoc": "DUOC",
     
     "ThemePage.Button.Primary": "Primary Button",
     "ThemePage.Button.Secondary": "Secondary Button",
@@ -45,7 +45,7 @@
     "ThemePage.Button.Light": "Light Button",
     "ThemePage.Button.Dark": "Dark Button",
     "ThemePage.Button.Home": "Home",
-    "ThemePage.Button.Logout": "Logout",
+    "ThemePage.Button.Logout": "Log Out",
     
     "ThemePage.Card.Title": "Card Title",
     "ThemePage.Card.Subtitle": "Card Subtitle",
@@ -66,3 +66,4 @@
     "ThemePage.Form.ToggleLabel": "Enable notifications",
     "ThemePage.Form.CheckboxLabel": "I accept the terms"
 }
+
