@@ -44,28 +44,28 @@ export class Clase {
   constructor() { }
 
   public static getNewClase(
-    sede: String,
-    idAsignatura: String,
-    seccion: String,
-    nombreAsignatura: String,
-    nombreProfesor: String,
+    sede: string,
+    idAsignatura: string,
+    seccion: string,
+    nombreAsignatura: string,
+    nombreProfesor: string,
     dia: Date,
     bloqueInicio: number,
     bloqueTermino: number,
-    horaInicio: String,
-    horaFin: String 
+    horaInicio: string,
+    horaFin: string 
   ) {
     const clase = new Clase();
-    clase.sede = "sede";
-    clase.idAsignatura = "idAsignatura";
-    clase.seccion = "seccion";
-    clase.nombreAsignatura = "nombreAsignatura";
-    clase.nombreProfesor = "nombreProfesor";
-    clase.dia = "dia";
+    clase.sede = sede;
+    clase.idAsignatura = idAsignatura;
+    clase.seccion = seccion;
+    clase.nombreAsignatura = nombreAsignatura;
+    clase.nombreProfesor = nombreProfesor;
+    clase.dia = dia;
     clase.bloqueInicio = bloqueInicio;
     clase.bloqueTermino = bloqueTermino;
-    clase.horaInicio = "horaInicio";
-    clase.horaFin = "horaFin";
+    clase.horaInicio = horaInicio;
+    clase.horaFin = horaFin;
     return clase;
   }
 
