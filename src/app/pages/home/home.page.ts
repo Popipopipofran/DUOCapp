@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { DinosaurComponent } from 'src/app/components/dinosaur/dinosaur.component';
+import { DinosaurComponent } from 'src/app/components/dinosaur/dinosaur.component';//cambiar
 import { AuthService } from 'src/app/services/auth.service';
 import { IonContent } from '@ionic/angular/standalone'
 import { TranslateModule } from '@ngx-translate/core';

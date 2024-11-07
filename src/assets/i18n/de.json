@@ -1,0 +1,68 @@
+{
+  "AppName": "DUOC Anwesenheitssystem",
+  "AuthorText": "Entwickelt von:",
+  "Author": "Bastian Cabezas, Zichao Yuan, Francisca Otarola, Saul Vega",
+  "Language": "Sprache",
+  "Language.English": "Englisch",
+  "Language.Spanish": "Spanisch",
+  "Language.Deutsch": "Deutsch",
+  
+  "Start.StartNewExperience": "Neue Erfahrung starten",
+
+  "Login.Title.Login": "Anmelden",
+  "Login.Label.Email": "E-Mail",
+  "Login.Placeholder.Email": "Gib hier deine E-Mail ein",
+  "Login.Label.Password": "Passwort",
+  "Login.Placeholder.Password": "Gib hier dein Passwort ein",
+  "Login.Button.Login": "Einloggen",
+  "Login.Button.Signin": "Registrieren",
+  "Login.Button.ForgotPassword": "Passwort vergessen",
+  "Login.Button.DarkMode": "Dunkelmodus",
+
+  "WelcomePage.Title.Wellcome": "Willkommen bei Angry-Dinosaurs!",
+
+  "HomePage.Button.Wellcome": "Startseite",
+  "HomePage.Button.class": "Mein Kurs",
+  "HomePage.Button.Scan": "Scannen",
+  "HomePage.Button.Dinosaur": "Dinosaurier",
+  "HomePage.Button.Forum": "Forum",
+
+  "ThemePage.Label.ColorTheme": "Farben Thema:",
+  "ThemePage.Color.Light": "Hell",
+  "ThemePage.Color.Dark": "Dunkel",
+  "ThemePage.Color.Green": "Grün",
+  "ThemePage.Color.Red": "Rot",
+  "ThemePage.Color.Facebook": "Facebook",
+  "ThemePage.Color.Instagram": "Instagram",
+  "ThemePage.Color.Duoc": "DUOC",
+  
+  "ThemePage.Button.Primary": "Primär Button",
+  "ThemePage.Button.Secondary": "Sekundär Button",
+  "ThemePage.Button.Tertiary": "Tertiär Button",
+  "ThemePage.Button.Success": "Erfolgs Button",
+  "ThemePage.Button.Warning": "Warnung Button",
+  "ThemePage.Button.Danger": "Gefährlich Button",
+  "ThemePage.Button.Light": "Heller Button",
+  "ThemePage.Button.Dark": "Dunkler Button",
+  "ThemePage.Button.Home": "Startseite",
+  "ThemePage.Button.Logout": "Abmelden",
+  
+  "ThemePage.Card.Title": "Kartentitel",
+  "ThemePage.Card.Subtitle": "Kartenuntertitel",
+  "ThemePage.Card.Content": "Dies ist der Inhalt der Karte. Du kannst die Farben und den Inhalt der Karte anpassen.",
+  
+  "ThemePage.List.Title": "Listen",
+  "ThemePage.List.Item1": "Listenpunkt 1",
+  "ThemePage.List.Item2": "Listenpunkt 2",
+  "ThemePage.List.Item3": "Listenpunkt 3",
+  
+  "ThemePage.Calendar.Title": "Kalender",
+  
+  "ThemePage.Form.Title": "Daten eingeben",
+  "ThemePage.Form.NameLabel": "Name",
+  "ThemePage.Form.NamePlaceholder": "Gib deinen Namen ein",
+  "ThemePage.Form.DescriptionLabel": "Beschreibung",
+  "ThemePage.Form.DescriptionPlaceholder": "Schreibe hier eine Beschreibung...",
+  "ThemePage.Form.ToggleLabel": "Benachrichtigungen aktivieren",
+  "ThemePage.Form.CheckboxLabel": "Ich akzeptiere die Bedingungen"
+}

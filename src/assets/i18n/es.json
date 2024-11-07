@@ -1,11 +1,11 @@
 {
     "AppName": "Sistema de asistencia DUOC",
     "AuthorText": "Desarrollado por:",
-    "Author": "Bastian Cabezas,Zichao Yuan, Francisca Otarola",
+    "Author": "Bastian Cabezas,Zichao Yuan, Francisca Otarola, Saul Vega",
     "Language": "Idioma",
     "Language.English": "English",
     "Language.Spanish": "Español",
-    "Language.Mapudungun": "Mapudungun",
+    "Language.Deutsch": "Deutsch",
     
     "Start.StartNewExperience": "Comienza una nueva experiencia",
 

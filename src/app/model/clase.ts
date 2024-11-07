@@ -3,31 +3,31 @@ import { showAlert, showAlertError } from "../tools/message-functions";
 export class Clase {
 
   static jsonclaseExample =
-        `{
-    "sede": "Alonso Ovalle",
-    "idAsignatura": "PGY4121",
-    "seccion": "001D",
-    "nombreAsignatura": "Aplicaciones Móviles",
-    "nombreProfesor": "Cristián Gómez Vega",
-    "dia": "2022-08-09",
-    "bloqueInicio": 7,
-    "bloqueTermino": 9,
-    "horaInicio": "13:00",
-    "horaFin": "15:15" 
+    `{
+      "sede": "Alonso Ovalle",
+      "idAsignatura": "PGY4121",
+      "seccion": "001D",
+      "nombreAsignatura": "Aplicaciones Móviles",
+      "nombreProfesor": "Cristián Gómez Vega",
+      "dia": "2022-08-09",
+      "bloqueInicio": 7,
+      "bloqueTermino": 9,
+      "horaInicio": "13:00",
+      "horaFin": "15:15" 
     }`;
   
     static jsonclaseEmpty =
-        `{
-    "sede": "",
-    "idAsignatura": "",
-    "seccion": "",
-    "nombreAsignatura": "",
-    "nombreProfesor": "",
-    "dia": "",
-    "bloqueInicio": 0,
-    "bloqueTermino": 0,
-    "horaInicio": "",
-    "horaFin": "" 
+    `{
+      "sede": "",
+      "idAsignatura": "",
+      "seccion": "",
+      "nombreAsignatura": "",
+      "nombreProfesor": "",
+      "dia": "",
+      "bloqueInicio": 0,
+      "bloqueTermino": 0,
+      "horaInicio": "",
+      "horaFin": "" 
     }`;
 
     sede= "";
