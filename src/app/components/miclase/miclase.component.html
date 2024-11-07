@@ -1,0 +1,25 @@
+
+<div class="row-container">
+  <ion-card class="center-card">
+    <ion-card-header>
+      <ion-card-title class="card-title-color">{{ asistencia?.nombreAsignatura || 'Asignatura no disponible' }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="center-content">
+      <p>Profesor: {{ asistencia?.nombreProfesor || 'No asignado' }}</p>
+      <p>Bloque Inicio: {{ asistencia?.bloqueInicio || 'No disponible' }}</p>
+      <p>Bloque Termino: {{ asistencia?.bloqueTermino || 'No disponible' }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="center-card">
+    <ion-card-header>
+      <ion-card-title class="card-title-color">Información Adicional</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="center-content">
+      <p>Sección: {{ asistencia?.seccion || 'No disponible' }}</p>
+      <p>Sede: {{ asistencia?.sede || 'No disponible' }}</p>
+      <p>Hora Inicio: {{ asistencia?.horaInicio || 'No disponible' }}</p>
+      <p>Hora Fin: {{ asistencia?.horaFin || 'No disponible' }}</p>
+    </ion-card-content>
+  </ion-card>
+</div>

@@ -9,14 +9,19 @@
     (scanned)="webQrScanned($event)"
     (stopped)="webQrStopped()">
   </app-qrwebscanner >
+
+
   
   <app-welcome 
     *ngIf="selectedComponent === 'welcome'">
+    <app-qrwebscanner></app-qrwebscanner>
   </app-welcome>
 
-  <app-dinosaur 
-    *ngIf="selectedComponent === 'dinosaur'">
-  </app-dinosaur>
+
+
+  <app-miclase
+    *ngIf="selectedComponent === 'miclase'">
+  </app-miclase>
 
   <app-forum 
     *ngIf="selectedComponent === 'forum'">

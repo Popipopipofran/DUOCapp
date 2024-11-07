@@ -1,7 +1,7 @@
 import { capSQLiteChanges, SQLiteDBConnection } from '@capacitor-community/sqlite';
 import { Injectable } from '@angular/core';
 import { SQLiteService } from './sqlite.service';
-import { User } from '../model/user';
+import { User } from '../model//user';
 import { BehaviorSubject } from 'rxjs';
 import { EducationalLevel } from '../model/educational-level';
 import { showAlertError } from '../tools/message-functions';

@@ -1,7 +1,7 @@
 {
-    "AppName": "Angry-Dinosaurs",
+    "AppName": "Sistema de asistencia DUOC",
     "AuthorText": "Developed by:",
-    "Author": "Cristián Gómez Vega",
+    "Author": "Bastian Cabezas,Zichao Yuan, Francisca Otarola",
     "Language": "Language",
     "Language.English": "English",
     "Language.Spanish": "Español",
@@ -21,7 +21,8 @@
 
     "WelcomePage.Title.Wellcome": "Welcome to Angry-Dinosaurs!",
 
-    "HomePage.Button.Wellcome": "Home",
+    "HomePage.Button.Welcome": "Home",
+    "HomePage.Button.Class": "My Class",
     "HomePage.Button.Scan": "Scan",
     "HomePage.Button.Dinosaur": "Dinosaur",
     "HomePage.Button.Forum": "Forum",

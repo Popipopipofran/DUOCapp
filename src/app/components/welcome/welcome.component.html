@@ -1,4 +1,12 @@
 <div class="ion-text-center">
-  <h1> Bienvenido(a) </h1>
-  <h1> {{ user.firstName}} {{ user.lastName }} </h1>
+  <h3> Bienvenido(a) </h3>
+  <h4> {{ user.firstName}} {{ user.lastName }} </h4>
+  <div style="justify-content: center;">
+    Escanea el QR
+  </div>
+  <div>
+    para registrar tu asistencia a calses!
+  </div>
+  <app-qrwebscanner>
+  </app-qrwebscanner>
 </div>

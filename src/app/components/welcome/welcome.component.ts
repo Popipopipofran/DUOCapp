@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { User } from 'src/app/model/user';
+import { User } from 'src/app/model//user';
 import { AuthService } from 'src/app/services/auth.service';
+import { QrWebScannerComponent } from '../qr-web-scanner/qr-web-scanner.component';
+
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
   standalone: true,
-  imports: [TranslateModule]
+  imports: [TranslateModule,QrWebScannerComponent]
 })
 export class WelcomeComponent implements OnInit {
 

@@ -1,0 +1,91 @@
+<div class="title-card">
+  <h2 class="ion-text-center"> mis Datos Personales </h2>
+</div>
+<div class="form-container">
+<form>
+  <ion-item>
+    <ion-input name="cuenta" label="Cuenta" labelPlacement="floating" type="text" 
+      [(ngModel)]="nombreUsuario" 
+      required></ion-input>
+  </ion-item>
+  
+
+  <ion-item>
+    <ion-input name="nombre" label="Nombre" labelPlacement="floating" type="text" 
+      [(ngModel)]="usuario.nombre" 
+      required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input name="apellido" label="Apellido" labelPlacement="floating" type="text"
+      [(ngModel)]="usuario.apellido" 
+      required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input name="correo" label="Correo" labelPlacement="floating" type="text"
+      [(ngModel)]="usuario.correo" 
+      required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input name="preguntaSecreta" label="Pregunta Secreta" labelPlacement="floating" type="text"
+      [(ngModel)]="usuario.preguntaSecreta" 
+      required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input name="respuestaSecreta" label="Respuesta Secreta" labelPlacement="floating" type="text"
+      [(ngModel)]="usuario.respuestaSecreta" 
+      required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select name="nivelEducacional" label="Educación" labelPlacement="floating"
+        [(ngModel)]="usuario.nivelEducacional.id">
+      <ion-select-option *ngFor="let nivelEducacional of nivelesEducacionales" 
+        [value]="nivelEducacional.id">
+          {{nivelEducacional.nombre}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>        
+
+  <ion-item>
+    <ion-input name="fechaNacimiento" label="Fecha nacimiento" labelPlacement="floating" type="date" 
+      [(ngModel)]="usuario.fechaNacimiento">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input name="password" label="Contraseña" labelPlacement="floating" type="password"
+      [(ngModel)]="usuario.password">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input name="password" label="Repetir contraseña" labelPlacement="floating" type="password"
+      [(ngModel)]="usuario.password">
+    </ion-input>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-button shape="block" (click)="limpiarFormulario()">
+          Limpiar
+        </ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button shape="block" (click)="mostrarDatosusuario()">
+          Mostrar Datos
+        </ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button shape="block" (click)="actualizarDatos()">
+          Actualizar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>
+</div>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { showAlertError, showToast } from 'src/app/tools/message-functions';
-import { User } from '../model/user';
+import { User } from '../model//user';
 import { Storage } from '@ionic/storage-angular';
 import { DatabaseService } from './database.service';
 
@@ -16,6 +16,7 @@ export class AuthService {
   isFirstLogin = new BehaviorSubject<boolean>(false);
   storageQrCodeKey = 'QR_CODE';
   qrCodeData = new BehaviorSubject<string | null>(null);
+  selectedComponent = new BehaviorSubject<string>("miclase");
 
   constructor(private router: Router, private db: DatabaseService, private storage: Storage) { }
 

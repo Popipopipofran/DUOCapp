@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-toolbar class="transparent-bg">
+  <ion-toolbar class="">
     <div slot="start" class="ion-margin">
       <app-language #selectLanguage></app-language>
     </div>
-    <div class="show-in-landscape">
-      <h1 class="glow-text"> {{ 'AppName' | translate }} </h1>
+    <div style= "text-align: center" class="show-in-landscape">
+      <h3 class=""> {{ 'AppName' | translate }} </h3>
     </div>
     <div slot="end" class="ion-margin">
-      <ion-button shape="round" size="small" (click)="navigateTheme()">
+      <ion-button color="warning" shape="round" size="small" (click)="navigateTheme()">
         Tema
         <ion-icon slot="start" name="color-wand-outline"></ion-icon>
       </ion-button>
@@ -17,9 +17,9 @@
 
 <ion-content [fullscreen]="true">
 
-  <img class="background-image" src="/assets/images/bronto-portrait-04.jpg">
+  <img class="background-image" src="/assets/images/inicio.jpg">
   
-  <h1 class="glow-text show-in-portrait margin-top-6"> {{ 'AppName' | translate }} </h1>
+  <h3 style= "text-align: center" class=" glow-text show-in-portrait margin-top-6"> {{ 'AppName' | translate }} </h3>
 
   <ion-card class="login-container transparent-input">
 

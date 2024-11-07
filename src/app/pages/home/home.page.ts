@@ -9,10 +9,13 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { QrWebScannerComponent } from 'src/app/components/qr-web-scanner/qr-web-scanner.component';
 import { Dinosaur } from 'src/app/model/dinosaur';
+import { Clase } from 'src/app/model/clase';
 import { Capacitor } from '@capacitor/core';
 import { ScannerService } from 'src/app/services/scanner.service';
 import { WelcomeComponent } from 'src/app/components/welcome/welcome.component';
 import { ForumComponent } from 'src/app/components/forum/forum.component';
+import { MiclaseComponent } from 'src/app/components/miclase/miclase.component';
+import { MisdatosComponent } from 'src/app/components/misdatos/misdatos.component';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +26,7 @@ import { ForumComponent } from 'src/app/components/forum/forum.component';
       CommonModule, FormsModule, TranslateModule, IonContent
     , HeaderComponent, FooterComponent
     , WelcomeComponent, QrWebScannerComponent, DinosaurComponent
-    , ForumComponent
+    , ForumComponent, MiclaseComponent, MisdatosComponent
   ]
 })
 export class HomePage {

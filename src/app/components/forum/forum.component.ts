@@ -13,7 +13,7 @@ import { Post } from 'src/app/model/post';
 import { showToast } from 'src/app/tools/message-functions';
 import { addIcons } from 'ionicons';
 import { Subscription } from 'rxjs';
-import { User } from 'src/app/model/user';
+import { User } from 'src/app/model//user';
 
 @Component({
   selector: 'app-forum',
