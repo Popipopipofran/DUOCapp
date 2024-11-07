@@ -1,48 +1,48 @@
 {
-    "AppName": "Angry-Dinosaurs",
+    "AppName": "DUOC Assistance System",
     "AuthorText": "Developed by:",
-    "Author": "Cristián Gómez Vega",
+    "Author": "Group",
     "Language": "Language",
     "Language.English": "English",
-    "Language.Spanish": "Español",
-    "Language.Mapudungun": "Mapudungun",
+    "Language.Spanish": "Spanish",
+    "Language.German": "German",
+    "Language.French": "French",
+    "Language.Chinese": "Chinese",
     
     "Start.StartNewExperience": "Start a new experience",
-
+    
     "Login.Title.Login": "Login",
     "Login.Label.Email": "Email",
     "Login.Placeholder.Email": "Enter your email here",
     "Login.Label.Password": "Password",
     "Login.Placeholder.Password": "Enter your password here",
     "Login.Button.Login": "Login",
-    "Login.Button.Signin": "Sign Up",
-    "Login.Button.ForgotPassword": "Forgot my password",
-    "Login.Button.DarkMode": "Dark Mode",
-
-    "WelcomePage.Title.Wellcome": "Welcome to Angry-Dinosaurs!",
-
+    "Login.Button.Signin": "Sign up",
+    "Login.Button.ForgotPassword": "Forgot password",
+    "Login.Button.DarkMode": "Dark mode",
+    
+    "WelcomePage.Title.Wellcome": "Welcome to DUOCUC!",
+    
     "HomePage.Button.Wellcome": "Home",
     "HomePage.Button.Scan": "Scan",
-    "HomePage.Button.Dinosaur": "Dinosaur",
+    "HomePage.Button.Dinosaur": "User",
     "HomePage.Button.Forum": "Forum",
-
-    "ThemePage.Label.ColorTheme": "Color Theme:",
+    
+    "ThemePage.Label.ColorTheme": "Color theme:",
     "ThemePage.Color.Light": "Light",
     "ThemePage.Color.Dark": "Dark",
     "ThemePage.Color.Green": "Green",
     "ThemePage.Color.Red": "Red",
-    "ThemePage.Color.Facebook": "Facebook",
-    "ThemePage.Color.Instagram": "Instagram",
-    "ThemePage.Color.Duoc": "Duoc",
+    "ThemePage.Color.Duoc": "DUOC",
     
-    "ThemePage.Button.Primary": "Primary Button",
-    "ThemePage.Button.Secondary": "Secondary Button",
-    "ThemePage.Button.Tertiary": "Tertiary Button",
-    "ThemePage.Button.Success": "Success Button",
-    "ThemePage.Button.Warning": "Warning Button",
-    "ThemePage.Button.Danger": "Danger Button",
-    "ThemePage.Button.Light": "Light Button",
-    "ThemePage.Button.Dark": "Dark Button",
+    "ThemePage.Button.Primary": "Primary button",
+    "ThemePage.Button.Secondary": "Secondary button",
+    "ThemePage.Button.Tertiary": "Tertiary button",
+    "ThemePage.Button.Success": "Success button",
+    "ThemePage.Button.Warning": "Warning button",
+    "ThemePage.Button.Danger": "Danger button",
+    "ThemePage.Button.Light": "Light button",
+    "ThemePage.Button.Dark": "Dark button",
     "ThemePage.Button.Home": "Home",
     "ThemePage.Button.Logout": "Logout",
     
@@ -64,4 +64,5 @@
     "ThemePage.Form.DescriptionPlaceholder": "Write a description here...",
     "ThemePage.Form.ToggleLabel": "Enable notifications",
     "ThemePage.Form.CheckboxLabel": "I accept the terms"
-}
+  }
+  

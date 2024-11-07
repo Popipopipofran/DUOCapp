@@ -1,0 +1,67 @@
+{
+  "AppName": "DUOC帮助系统",
+  "AuthorText": "开发者：",
+  "Author": "团队",
+  "Language": "语言",
+  "Language.English": "英语",
+  "Language.Spanish": "西班牙语",
+  "Language.German": "德语",
+  "Language.French": "法语",
+  "Language.Chinese": "中文",
+  
+  "Start.StartNewExperience": "开始新的体验",
+  
+  "Login.Title.Login": "登录",
+  "Login.Label.Email": "电子邮件",
+  "Login.Placeholder.Email": "在此输入您的电子邮件",
+  "Login.Label.Password": "密码",
+  "Login.Placeholder.Password": "在此输入您的密码",
+  "Login.Button.Login": "登录",
+  "Login.Button.Signin": "注册",
+  "Login.Button.ForgotPassword": "忘记密码",
+  "Login.Button.DarkMode": "深色模式",
+  
+  "WelcomePage.Title.Wellcome": "欢迎来到DUOCUC！",
+  
+  "HomePage.Button.Wellcome": "主页",
+  "HomePage.Button.Scan": "扫描",
+  "HomePage.Button.Dinosaur": "用户",
+  "HomePage.Button.Forum": "论坛",
+  
+  "ThemePage.Label.ColorTheme": "颜色主题：",
+  "ThemePage.Color.Light": "亮色",
+  "ThemePage.Color.Dark": "暗色",
+  "ThemePage.Color.Green": "绿色",
+  "ThemePage.Color.Red": "红色",
+  "ThemePage.Color.Duoc": "DUOC",
+  
+  "ThemePage.Button.Primary": "主按钮",
+  "ThemePage.Button.Secondary": "次按钮",
+  "ThemePage.Button.Tertiary": "三级按钮",
+  "ThemePage.Button.Success": "成功按钮",
+  "ThemePage.Button.Warning": "警告按钮",
+  "ThemePage.Button.Danger": "危险按钮",
+  "ThemePage.Button.Light": "亮按钮",
+  "ThemePage.Button.Dark": "暗按钮",
+  "ThemePage.Button.Home": "主页",
+  "ThemePage.Button.Logout": "登出",
+  
+  "ThemePage.Card.Title": "卡片标题",
+  "ThemePage.Card.Subtitle": "卡片副标题",
+  "ThemePage.Card.Content": "这是卡片内容。您可以自定义卡片的颜色和内容。",
+  
+  "ThemePage.List.Title": "列表",
+  "ThemePage.List.Item1": "列表项1",
+  "ThemePage.List.Item2": "列表项2",
+  "ThemePage.List.Item3": "列表项3",
+  
+  "ThemePage.Calendar.Title": "日历",
+  
+  "ThemePage.Form.Title": "数据输入",
+  "ThemePage.Form.NameLabel": "姓名",
+  "ThemePage.Form.NamePlaceholder": "输入您的姓名",
+  "ThemePage.Form.DescriptionLabel": "描述",
+  "ThemePage.Form.DescriptionPlaceholder": "在此输入描述...",
+  "ThemePage.Form.ToggleLabel": "启用通知",
+  "ThemePage.Form.CheckboxLabel": "我接受条款"
+}

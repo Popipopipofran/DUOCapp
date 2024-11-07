@@ -1,0 +1,67 @@
+{
+  "AppName": "Système d'Assistance DUOC",
+  "AuthorText": "Développé par :",
+  "Author": "Groupe",
+  "Language": "Langue",
+  "Language.English": "Anglais",
+  "Language.Spanish": "Espagnol",
+  "Language.German": "Allemand",
+  "Language.French": "Français",
+  "Language.Chinese": "Chinois",
+  
+  "Start.StartNewExperience": "Commencez une nouvelle expérience",
+  
+  "Login.Title.Login": "Se connecter",
+  "Login.Label.Email": "Email",
+  "Login.Placeholder.Email": "Entrez votre email ici",
+  "Login.Label.Password": "Mot de passe",
+  "Login.Placeholder.Password": "Entrez votre mot de passe ici",
+  "Login.Button.Login": "Connexion",
+  "Login.Button.Signin": "S'inscrire",
+  "Login.Button.ForgotPassword": "Mot de passe oublié",
+  "Login.Button.DarkMode": "Mode sombre",
+  
+  "WelcomePage.Title.Wellcome": "Bienvenue sur DUOCUC!",
+  
+  "HomePage.Button.Wellcome": "Accueil",
+  "HomePage.Button.Scan": "Scanner",
+  "HomePage.Button.Dinosaur": "Utilisateur",
+  "HomePage.Button.Forum": "Forum",
+  
+  "ThemePage.Label.ColorTheme": "Thème de couleur :",
+  "ThemePage.Color.Light": "Clair",
+  "ThemePage.Color.Dark": "Sombre",
+  "ThemePage.Color.Green": "Vert",
+  "ThemePage.Color.Red": "Rouge",
+  "ThemePage.Color.Duoc": "DUOC",
+  
+  "ThemePage.Button.Primary": "Bouton principal",
+  "ThemePage.Button.Secondary": "Bouton secondaire",
+  "ThemePage.Button.Tertiary": "Bouton tertiaire",
+  "ThemePage.Button.Success": "Bouton succès",
+  "ThemePage.Button.Warning": "Bouton avertissement",
+  "ThemePage.Button.Danger": "Bouton danger",
+  "ThemePage.Button.Light": "Bouton clair",
+  "ThemePage.Button.Dark": "Bouton sombre",
+  "ThemePage.Button.Home": "Accueil",
+  "ThemePage.Button.Logout": "Se déconnecter",
+  
+  "ThemePage.Card.Title": "Titre de la carte",
+  "ThemePage.Card.Subtitle": "Sous-titre de la carte",
+  "ThemePage.Card.Content": "Voici le contenu de la carte. Vous pouvez personnaliser les couleurs de la carte et de son contenu.",
+  
+  "ThemePage.List.Title": "Listes",
+  "ThemePage.List.Item1": "Élément de liste 1",
+  "ThemePage.List.Item2": "Élément de liste 2",
+  "ThemePage.List.Item3": "Élément de liste 3",
+  
+  "ThemePage.Calendar.Title": "Calendriers",
+  
+  "ThemePage.Form.Title": "Entrée de données",
+  "ThemePage.Form.NameLabel": "Nom",
+  "ThemePage.Form.NamePlaceholder": "Entrez votre nom",
+  "ThemePage.Form.DescriptionLabel": "Description",
+  "ThemePage.Form.DescriptionPlaceholder": "Écrivez une description ici...",
+  "ThemePage.Form.ToggleLabel": "Activer les notifications",
+  "ThemePage.Form.CheckboxLabel": "J'accepte les termes"
+}

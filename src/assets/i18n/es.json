@@ -1,11 +1,13 @@
 {
-    "AppName": "Angry-Dinosaurs",
+    "AppName": "Sistema de Asistencia DUOC",
     "AuthorText": "Desarrollado por:",
-    "Author": "Cristián Gómez Vega",
+    "Author": "Grupo",
     "Language": "Idioma",
     "Language.English": "English",
     "Language.Spanish": "Español",
-    "Language.Mapudungun": "Mapudungun",
+    "Language.German": "German",
+    "Language.French": "French",
+    "Language.Chinese": "Chinese",
     
     "Start.StartNewExperience": "Comienza una nueva experiencia",
 
@@ -19,20 +21,18 @@
     "Login.Button.ForgotPassword": "Olvidé mi contraseña",
     "Login.Button.DarkMode": "Oscuro",
 
-    "WelcomePage.Title.Wellcome": "¡Bienvenido a Angry-Dinosaurs!",
+    "WelcomePage.Title.Wellcome": "¡Bienvenido a DUOCUC!",
 
     "HomePage.Button.Wellcome": "Inicio",
     "HomePage.Button.Scan": "Escanear",
-    "HomePage.Button.Dinosaur": "Dinosaurio",
+    "HomePage.Button.Dinosaur": "Usuario",
     "HomePage.Button.Forum": "Foro",
 
     "ThemePage.Label.ColorTheme": "Tema de color:",
     "ThemePage.Color.Light": "Claro",
     "ThemePage.Color.Dark": "Oscuro",
     "ThemePage.Color.Green": "Verde",
-    "ThemePage.Color.Red": "Rojo",
-    "ThemePage.Color.Facebook": "Facebook",
-    "ThemePage.Color.Instagram": "Instagram",
+    "ThemePage.Color.Red": "Red",
     "ThemePage.Color.Duoc": "DUOC",
     
     "ThemePage.Button.Primary": "Botón Primario",
