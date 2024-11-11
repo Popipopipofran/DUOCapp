@@ -1,30 +1,30 @@
 {
-    "AppName": "Sistema de asistencia DUOC",
+    "AppName": "DUOC Assistance System",
     "AuthorText": "Developed by:",
-    "Author": "Bastian Cabezas,Zichao Yuan, Francisca Otarola",
+    "Author": "Bastian Cabezas, Zichao Yuan, Francisca Otarola, Saul Vega",
     "Language": "Language",
     "Language.English": "English",
-    "Language.Spanish": "Español",
+    "Language.Spanish": "Spanish",
     "Language.Mapudungun": "Mapudungun",
     
     "Start.StartNewExperience": "Start a new experience",
 
-    "Login.Title.Login": "Login",
+    "Login.Title.Login": "Log in",
     "Login.Label.Email": "Email",
     "Login.Placeholder.Email": "Enter your email here",
     "Login.Label.Password": "Password",
     "Login.Placeholder.Password": "Enter your password here",
-    "Login.Button.Login": "Login",
-    "Login.Button.Signin": "Sign Up",
-    "Login.Button.ForgotPassword": "Forgot my password",
-    "Login.Button.DarkMode": "Dark Mode",
+    "Login.Button.Login": "Log in",
+    "Login.Button.Signin": "Sign up",
+    "Login.Button.ForgotPassword": "Forgot password",
+    "Login.Button.DarkMode": "Dark mode",
 
-    "WelcomePage.Title.Wellcome": "Welcome to Angry-Dinosaurs!",
+    "WelcomePage.Title.Wellcome": "Welcome to the DUOC Assistance System!",
 
-    "HomePage.Button.Welcome": "Home",
-    "HomePage.Button.Class": "My Class",
+    "HomePage.Button.Wellcome": "Home",
+    "HomePage.Button.class": "My class",
     "HomePage.Button.Scan": "Scan",
-    "HomePage.Button.Dinosaur": "Dinosaur",
+    "HomePage.Button.datos": "My data",
     "HomePage.Button.Forum": "Forum",
 
     "ThemePage.Label.ColorTheme": "Color Theme:",
@@ -34,7 +34,7 @@
     "ThemePage.Color.Red": "Red",
     "ThemePage.Color.Facebook": "Facebook",
     "ThemePage.Color.Instagram": "Instagram",
-    "ThemePage.Color.Duoc": "Duoc",
+    "ThemePage.Color.Duoc": "DUOC",
     
     "ThemePage.Button.Primary": "Primary Button",
     "ThemePage.Button.Secondary": "Secondary Button",
@@ -49,7 +49,7 @@
     
     "ThemePage.Card.Title": "Card Title",
     "ThemePage.Card.Subtitle": "Card Subtitle",
-    "ThemePage.Card.Content": "This is the content of the card. You can customize the colors of the card and its content.",
+    "ThemePage.Card.Content": "This is the card content. You can customize the card colors and its content.",
     
     "ThemePage.List.Title": "Lists",
     "ThemePage.List.Item1": "List Item 1",

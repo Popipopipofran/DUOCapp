@@ -69,10 +69,6 @@ export class Clase {
     return clase;
   }
 
-  // Devolver verdadero si el texto del QR contiene todos los datos de
-  // un dinosaurio, de lo contrario se ha escaneado un QR que a lo 
-  // mejor es válido, pero es de otra cosa que no es un dinosaurio
-  // de esta aplicación.
 
   static isValidClaseQrCode(qr: string) {
     

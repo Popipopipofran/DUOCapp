@@ -1,12 +1,18 @@
 <div class="ion-text-center">
   <h3> Bienvenido(a) </h3>
-  <h4> {{ user.firstName}} {{ user.lastName }} </h4>
+  <h4> {{ user.firstName }} {{ user.lastName }} </h4>
   <div style="justify-content: center;">
     Escanea el QR
   </div>
   <div>
-    para registrar tu asistencia a calses!
+    para registrar tu asistencia a clases!
   </div>
-  <app-qrwebscanner>
-  </app-qrwebscanner>
+
+  <!-- Botón que activa el escáner -->
+  <ion-button (click)="toggleScanner()" size="small" fill="clear">
+    <ion-icon name="qr-code-outline" color="light"></ion-icon>
+  </ion-button>
+
+  <!-- Componente del escáner de QR -->
+  <app-qrwebscanner *ngIf="isScannerVisible" (scanned)="onQrScanned($event)"></app-qrwebscanner>
 </div>

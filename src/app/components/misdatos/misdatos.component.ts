@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
-//import { Persona } from 'src/app/model/persona';
 import { NivelEducacional } from 'src/app/model/nivel-educacional';
 import { Usuario } from 'src/app/model/usuario';
+import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/services/user.service';
 import { AnimationController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
@@ -12,6 +12,7 @@ import { IonFabButton, IonFab, IonList, IonCardContent, IonHeader
   , IonFabList, IonSelectOption } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-misdatos',
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     , CommonModule, FormsModule, IonSelectOption]
 })
 export class MisdatosComponent implements OnInit, AfterViewInit{
+  user: User = new User();
   
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef; public usuario: Usuario = new Usuario('', '', '', '', '', '');
 
@@ -35,21 +37,20 @@ export class MisdatosComponent implements OnInit, AfterViewInit{
   nivelesEducacionales: NivelEducacional[] = [];
 
   ngOnInit() {
-    const usuarioAutenticado = this.userService.obtenerUsuarioAutenticado();
-    if (usuarioAutenticado) {
-      this.usuario = usuarioAutenticado;
-      this.idNivelEducacional = this.usuario.nivelEducacional.id;
-      this.fechaNacimiento = this.usuario.fechaNacimiento;
-    } else {
-      alert('No hay usuario autenticado.');
-    }
-    
-    this.cargarNivelesEducacionales();
+
   }
   
 
   constructor(private userService: UserService,private loadingController: LoadingController,
-    private animationController: AnimationController) {}
+    private animationController: AnimationController, private auth: AuthService) {
+
+      this.auth.authUser.subscribe((user) => {
+        console.log(user);
+        if (user) {
+          this.user = user;
+        }
+      });
+    }
 
   ngAfterViewInit(): void {
     if (this.itemTitulo) {
