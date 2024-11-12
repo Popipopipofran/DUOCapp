@@ -14,10 +14,7 @@
   
   <app-welcome 
     *ngIf="selectedComponent === 'welcome'">
-    <app-qrwebscanner></app-qrwebscanner>
   </app-welcome>
-
-
 
   <app-miclase
     *ngIf="selectedComponent === 'miclase'">
@@ -26,6 +23,10 @@
   <app-forum 
     *ngIf="selectedComponent === 'forum'">
   </app-forum>
+
+  <app-misdatos 
+  *ngIf="selectedComponent === 'datos'">
+</app-misdatos>
 
 </ion-content>
 

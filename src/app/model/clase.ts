@@ -3,31 +3,31 @@ import { showAlert, showAlertError } from "../tools/message-functions";
 export class Clase {
 
   static jsonclaseExample =
-        `{
-    "sede": "Alonso Ovalle",
-    "idAsignatura": "PGY4121",
-    "seccion": "001D",
-    "nombreAsignatura": "Aplicaciones Móviles",
-    "nombreProfesor": "Cristián Gómez Vega",
-    "dia": "2022-08-09",
-    "bloqueInicio": 7,
-    "bloqueTermino": 9,
-    "horaInicio": "13:00",
-    "horaFin": "15:15" 
+    `{
+      "sede": "Alonso Ovalle",
+      "idAsignatura": "PGY4121",
+      "seccion": "001D",
+      "nombreAsignatura": "Aplicaciones Móviles",
+      "nombreProfesor": "Cristián Gómez Vega",
+      "dia": "2022-08-09",
+      "bloqueInicio": 7,
+      "bloqueTermino": 9,
+      "horaInicio": "13:00",
+      "horaFin": "15:15" 
     }`;
   
     static jsonclaseEmpty =
-        `{
-    "sede": "",
-    "idAsignatura": "",
-    "seccion": "",
-    "nombreAsignatura": "",
-    "nombreProfesor": "",
-    "dia": "",
-    "bloqueInicio": 0,
-    "bloqueTermino": 0,
-    "horaInicio": "",
-    "horaFin": "" 
+    `{
+      "sede": "",
+      "idAsignatura": "",
+      "seccion": "",
+      "nombreAsignatura": "",
+      "nombreProfesor": "",
+      "dia": "",
+      "bloqueInicio": 0,
+      "bloqueTermino": 0,
+      "horaInicio": "",
+      "horaFin": "" 
     }`;
 
     sede= "";
@@ -44,35 +44,31 @@ export class Clase {
   constructor() { }
 
   public static getNewClase(
-    sede: String,
-    idAsignatura: String,
-    seccion: String,
-    nombreAsignatura: String,
-    nombreProfesor: String,
+    sede: string,
+    idAsignatura: string,
+    seccion: string,
+    nombreAsignatura: string,
+    nombreProfesor: string,
     dia: Date,
     bloqueInicio: number,
     bloqueTermino: number,
-    horaInicio: String,
-    horaFin: String 
+    horaInicio: string,
+    horaFin: string 
   ) {
     const clase = new Clase();
-    clase.sede = "sede";
-    clase.idAsignatura = "idAsignatura";
-    clase.seccion = "seccion";
-    clase.nombreAsignatura = "nombreAsignatura";
-    clase.nombreProfesor = "nombreProfesor";
-    clase.dia = "dia";
+    clase.sede = sede;
+    clase.idAsignatura = idAsignatura;
+    clase.seccion = seccion;
+    clase.nombreAsignatura = nombreAsignatura;
+    clase.nombreProfesor = nombreProfesor;
+    clase.dia = dia;
     clase.bloqueInicio = bloqueInicio;
     clase.bloqueTermino = bloqueTermino;
-    clase.horaInicio = "horaInicio";
-    clase.horaFin = "horaFin";
+    clase.horaInicio = horaInicio;
+    clase.horaFin = horaFin;
     return clase;
   }
 
-  // Devolver verdadero si el texto del QR contiene todos los datos de
-  // un dinosaurio, de lo contrario se ha escaneado un QR que a lo 
-  // mejor es válido, pero es de otra cosa que no es un dinosaurio
-  // de esta aplicación.
 
   static isValidClaseQrCode(qr: string) {
     

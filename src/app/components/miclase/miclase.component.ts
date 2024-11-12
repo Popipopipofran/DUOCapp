@@ -10,6 +10,7 @@ import { IonFabButton, IonFab, IonList, IonCardContent, IonHeader
   , IonFabList } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-miclase',
@@ -27,8 +28,16 @@ export class MiclaseComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
   asistencia: Asistencia | null = null;
   private asistenciaSubscription!: Subscription;
+  clase: any;
+  private subscription: Subscription;
 
-  constructor(private asistenciaService: AsistenciaService, private animationController: AnimationController, private userService: UserService) {}
+  constructor(private authService: AuthService,private asistenciaService: AsistenciaService, private animationController: AnimationController, private userService: UserService) {
+    { 
+      this.subscription = this.authService.qrCodeData.subscribe((qr) => {
+        this.clase = qr? JSON.parse(qr): null;
+      })
+    }
+  }
 
   ngOnInit() {
     this.asistenciaSubscription = this.asistenciaService.asistencia$.subscribe((data: Asistencia | null) => {
