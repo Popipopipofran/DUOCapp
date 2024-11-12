@@ -71,6 +71,7 @@ export class LoginPage implements ViewWillEnter {
 
   passwordRecovery() {
     
+    
   }
 
   showMap() {
