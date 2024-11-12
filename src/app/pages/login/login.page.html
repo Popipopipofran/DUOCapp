@@ -21,7 +21,7 @@
   
   <h3 style= "text-align: center" class=" normal-text show-in-portrait margin-top-6"> {{ 'AppName' | translate }} </h3>
 
-  <ion-card class="login-container transparent-input">
+  <ion-card class="login-container transparent-input"  color="light">
 
     <ion-card-header class="show-in-portrait">
       <ion-card-title color="light" class=" ion-text-center ">
@@ -33,7 +33,7 @@
       </ion-card-title>
     </ion-card-header>
 
-    <ion-card-content class="transparent-input text-center">
+    <ion-card-content class="transparent-input text-center" >
       
       <ion-item class="margin-bottom-6 float-left-landscape">
         <ion-input 
@@ -69,6 +69,9 @@
 <ion-footer>
   <ion-button color="primary" shape="block" (click)="registerNewUser()">
     {{ 'Login.Button.Signin' | translate }}
+  </ion-button>
+  <ion-button color="primary" shape="block" (click)="registerNewUser()">
+    {{ 'Login.Button.Myroute' | translate }}
   </ion-button>
   <ion-button color="secondary" shape="block" (click)="passwordRecovery()">
     {{ 'Login.Button.ForgotPassword' | translate }}

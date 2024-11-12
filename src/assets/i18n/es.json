@@ -1,7 +1,7 @@
 {
     "AppName": "Sistema de asistencia DUOC",
     "AuthorText": "Desarrollado por:",
-    "Author": "Bastian Cabezas,Zichao Yuan,Saul Vega,Francisca Otarola",
+    "Author": "Bastian Cabezas, Zichao Yuan, Saul Vega, Francisca Otarola",
     "Language": "Idioma",
     "Language.English": "English",
     "Language.Spanish": "Español",
@@ -16,6 +16,7 @@
     "Login.Placeholder.Password": "Ingresa aquí tu contraseña",
     "Login.Button.Login": "Ingresar",
     "Login.Button.Signin": "Registrarse",
+    "Login.Button.Myroute": "Mi ruta DUOC",
     "Login.Button.ForgotPassword": "Olvidé mi contraseña",
     "Login.Button.DarkMode": "Oscuro",
 
@@ -24,7 +25,7 @@
     "HomePage.Button.Wellcome": "Inicio",
     "HomePage.Button.class": "Mi clase",
     "HomePage.Button.Scan": "Escanear",
-    "HomePage.Button.Dinosaur": "Dinosaurio",
+    "HomePage.Button.datos": "Mis datos",
     "HomePage.Button.Forum": "Foro",
 
     "ThemePage.Label.ColorTheme": "Tema de color:",
