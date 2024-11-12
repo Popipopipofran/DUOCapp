@@ -73,4 +73,8 @@ export class LoginPage implements ViewWillEnter {
     
   }
 
+  showMap() {
+    this.router.navigate(['/map']);
+  }
+
 }
