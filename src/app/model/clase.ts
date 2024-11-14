@@ -49,7 +49,7 @@ export class Clase {
     seccion: string,
     nombreAsignatura: string,
     nombreProfesor: string,
-    dia: Date,
+    dia: string,
     bloqueInicio: number,
     bloqueTermino: number,
     horaInicio: string,

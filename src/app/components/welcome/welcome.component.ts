@@ -33,7 +33,7 @@ export class WelcomeComponent implements OnInit {
   toggleScanner() {
     this.isScannerVisible = !this.isScannerVisible;
   }
-
+  
   onQrScanned(data: string) {
     console.log('QR Data:', data);
     this.isScannerVisible = false; // Oculta el escáner después de escanear
