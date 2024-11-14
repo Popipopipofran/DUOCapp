@@ -15,6 +15,7 @@ import { ForumComponent } from 'src/app/components/forum/forum.component';
 import { MiclaseComponent } from 'src/app/components/miclase/miclase.component';
 import { MisdatosComponent } from 'src/app/components/misdatos/misdatos.component';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -69,6 +70,7 @@ export class HomePage {
     this.changeComponent('welcome');
   }
 
+
   footerClick(button: string) {
     this.selectedComponent = button;
   }
@@ -77,5 +79,6 @@ export class HomePage {
     this.selectedComponent = name;
     this.footer.selectedButton = name;
   }
+
 
 }

@@ -49,7 +49,6 @@ export class LoginPage implements ViewWillEnter {
   { 
     this.correo = 'atorres';
     this.password = '1234';
-    // Los iconos deben ser agregados a uno (ver en https://ionic.io/ionicons)
     addIcons({ colorWandOutline }); 
   }
 
@@ -70,8 +69,7 @@ export class LoginPage implements ViewWillEnter {
   }
 
   passwordRecovery() {
-    
-    
+    this.router.navigate(['/pregunta']);
   }
 
   showMap() {

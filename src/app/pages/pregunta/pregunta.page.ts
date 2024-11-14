@@ -1,10 +1,7 @@
-import { ActivatedRoute, Router,NavigationExtras } from '@angular/router';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { Usuario } from 'src/app/model/usuario';
 import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
-import { AnimationController } from '@ionic/angular';
-import { LoadingController } from '@ionic/angular';
-import { ToastController } from '@ionic/angular';
-
+import { AnimationController, LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-pregunta',
@@ -14,7 +11,7 @@ import { ToastController } from '@ionic/angular';
 export class PreguntaPage implements OnInit {
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
 
-  public usuario?: Usuario; // Propiedad opcional para evitar error de inicialización
+  public usuario?: Usuario; 
   public respuesta: string = '';
 
   constructor(
@@ -49,21 +46,50 @@ export class PreguntaPage implements OnInit {
 
   ngOnInit() { }
 
-  public validarRespuestaSecreta(): void {
+  public async validarRespuestaSecreta(): Promise<void> {
+
+    const loading = await this.loadingController.create({
+      message: 'Validando respuesta...',
+    });
+    await loading.present();
+
+
     if (this.usuario && this.usuario.respuestaSecreta === this.respuesta) {
-      // Navegar a la página 'correcto' y pasar la clave
+
+      await loading.dismiss();
+
+
+      const toast = await this.toastController.create({
+        message: 'Respuesta correcta. Redirigiendo...',
+        duration: 2000,
+        color: 'success',
+      });
+      toast.present();
+
+      // esta es la pagina COOORRECCCTOOOOO 
       const navigationExtras: NavigationExtras = {
         state: {
-          mensaje: 'Tu contraseña es ' + this.usuario.password
-        }
+          mensaje: 'Tu contraseña es ' + this.usuario.password,
+        },
       };
       this.router.navigate(['/correcto'], navigationExtras);
     } else {
-      // Navegar a la página 'incorrecto' y pasar un mensaje de error
+    
+      await loading.dismiss();
+
+      // esto es el mensaje de erroooooooraaaaaaaaaaaaaaaaa
+      const toast = await this.toastController.create({
+        message: 'Respuesta incorrecta. Intenta nuevamente.',
+        duration: 2000,
+        color: 'danger',
+      });
+      toast.present();
+
+      // esto es la pagina incorreccctooo y se supone que muestra el mensaje d error
       const navigationExtras: NavigationExtras = {
         state: {
-          mensaje: '¡Lo sentimos Pero los datos ingresados no son correctos!'
-        }
+          mensaje: '¡Lo sentimos, pero los datos ingresados no son correctos!',
+        },
       };
       this.router.navigate(['/incorrecto'], navigationExtras);
     }
