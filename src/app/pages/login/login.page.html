@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar class="">
+  <ion-toolbar color="black">
     <div slot="start" class="ion-margin">
       <app-language #selectLanguage></app-language>
     </div>
-    <div style= "text-align: center" class="show-in-landscape">
+    <div style= "text-align: center"  color="white" class="show-in-landscape">
       <h3 class=""> {{ 'AppName' | translate }} </h3>
     </div>
     <div slot="end" class="ion-margin">
@@ -19,12 +19,12 @@
 
   <img class="background-image" src="/assets/images/inicio.jpg">
   
-  <h3 style= "text-align: center" class=" glow-text show-in-portrait margin-top-6"> {{ 'AppName' | translate }} </h3>
+  <h3 style= "text-align: center" class=" normal-text show-in-portrait margin-top-6"> {{ 'AppName' | translate }} </h3>
 
   <ion-card class="login-container transparent-input">
 
     <ion-card-header class="show-in-portrait">
-      <ion-card-title color="light" class="glow-text">
+      <ion-card-title color="light" class=" ion-text-center ">
         <h4>
           <b>
             {{ 'Login.Title.Login' | translate }}
@@ -70,7 +70,11 @@
   <ion-button color="primary" shape="block" (click)="registerNewUser()">
     {{ 'Login.Button.Signin' | translate }}
   </ion-button>
-  <ion-button color="secondary" shape="block" (click)="passwordRecovery()">
+  <ion-button color="secondary" shape="block" (click)="showMap()">
+    {{ 'Login.Button.GoDuoc' | translate }}
+  </ion-button>
+  <ion-button color="primary" shape="block" (click)="passwordRecovery()">
     {{ 'Login.Button.ForgotPassword' | translate }}
   </ion-button>
+
 </ion-footer>

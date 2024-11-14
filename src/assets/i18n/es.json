@@ -1,11 +1,11 @@
 {
     "AppName": "Sistema de asistencia DUOC",
     "AuthorText": "Desarrollado por:",
-    "Author": "Bastian Cabezas,Zichao Yuan, Francisca Otarola, Saul Vega",
+    "Author": "Bastian Cabezas,Zichao Yuan,Saul Vega,Francisca Otarola, Saul Vega",
     "Language": "Idioma",
     "Language.English": "English",
     "Language.Spanish": "Español",
-    "Language.Deutsch": "Deutsch",
+    "Language.German": "Aleman",
     
     "Start.StartNewExperience": "Comienza una nueva experiencia",
 
@@ -15,11 +15,12 @@
     "Login.Label.Password": "Contraseña",
     "Login.Placeholder.Password": "Ingresa aquí tu contraseña",
     "Login.Button.Login": "Ingresar",
+    "Login.Button.GoDuoc": "mi ruta a DUOC",
     "Login.Button.Signin": "Registrarse",
     "Login.Button.ForgotPassword": "Olvidé mi contraseña",
     "Login.Button.DarkMode": "Oscuro",
 
-    "WelcomePage.Title.Wellcome": "¡Bienvenido al sistea de asistencia de DUOC!",
+    "WelcomePage.Title.Wellcome": "¡Bienvenido al sistema de asistencia DUOCUC!",
 
     "HomePage.Button.Wellcome": "Inicio",
     "HomePage.Button.class": "Mi clase",

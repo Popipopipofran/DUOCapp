@@ -1,11 +1,11 @@
 {
     "AppName": "DUOC Assistance System",
     "AuthorText": "Developed by:",
-    "Author": "Bastian Cabezas, Zichao Yuan, Francisca Otarola, Saul Vega",
+    "Author": "Bastian Cabezas, Zichao Yuan, Saul Vega, Francisca Otarola",
     "Language": "Language",
     "Language.English": "English",
     "Language.Spanish": "Spanish",
-    "Language.Mapudungun": "Mapudungun",
+    "Language.German": "German",
     
     "Start.StartNewExperience": "Start a new experience",
 
@@ -16,10 +16,11 @@
     "Login.Placeholder.Password": "Enter your password here",
     "Login.Button.Login": "Log in",
     "Login.Button.Signin": "Sign up",
+    "Login.Button.Myroute": "My DUOC route",
     "Login.Button.ForgotPassword": "Forgot password",
-    "Login.Button.DarkMode": "Dark mode",
+    "Login.Button.DarkMode": "Dark Mode",
 
-    "WelcomePage.Title.Wellcome": "Welcome to the DUOC Assistance System!",
+    "WelcomePage.Title.Wellcome": "Welcome to Angry-Dinosaurs!",
 
     "HomePage.Button.Wellcome": "Home",
     "HomePage.Button.class": "My class",
@@ -27,7 +28,7 @@
     "HomePage.Button.datos": "My data",
     "HomePage.Button.Forum": "Forum",
 
-    "ThemePage.Label.ColorTheme": "Color Theme:",
+    "ThemePage.Label.ColorTheme": "Color theme:",
     "ThemePage.Color.Light": "Light",
     "ThemePage.Color.Dark": "Dark",
     "ThemePage.Color.Green": "Green",
@@ -45,7 +46,7 @@
     "ThemePage.Button.Light": "Light Button",
     "ThemePage.Button.Dark": "Dark Button",
     "ThemePage.Button.Home": "Home",
-    "ThemePage.Button.Logout": "Logout",
+    "ThemePage.Button.Logout": "Log out",
     
     "ThemePage.Card.Title": "Card Title",
     "ThemePage.Card.Subtitle": "Card Subtitle",
