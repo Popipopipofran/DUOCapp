@@ -65,7 +65,7 @@ export class LoginPage implements ViewWillEnter {
   }
 
   registerNewUser() {
-
+    //no existe
   }
 
   passwordRecovery() {

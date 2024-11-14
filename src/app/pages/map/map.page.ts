@@ -9,6 +9,7 @@ import { GeoService } from 'src/app/services/geo.service';
 import * as L from 'leaflet'; // Importamos Leaflet
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-map',
@@ -33,6 +34,7 @@ export class MapPage implements OnInit {
   constructor(
     private geo: GeoService, 
     private http: HttpClient,
+    private authService: AuthService,
   private router: Router) { 
 
   }
@@ -40,6 +42,10 @@ export class MapPage implements OnInit {
   ngOnInit() {
     this.loadMap();
     this.fixLeafletIconPath();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
   async loadMap() {
@@ -149,8 +155,6 @@ export class MapPage implements OnInit {
     L.Marker.prototype.options.icon = iconDefault;
   }
 
-  navegarMisDatos() {
-    //this.router.navigate(['/mis-datos']);
-  }
+
 
 }
