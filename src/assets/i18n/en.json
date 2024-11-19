@@ -1,42 +1,41 @@
 {
-    "AppName": "DUOC Assistance System",
+    "AppName": "DUOC Attendance System",
     "AuthorText": "Developed by:",
-    "Author": "Bastian Cabezas, Zichao Yuan, Saul Vega, Francisca Otarola",
+    "Author": "Bastian Cabezas, Zichao Yuan, Saul Vega, Francisca Otarola, Saul Vega",
     "Language": "Language",
+    "Theme": "Theme",
     "Language.English": "English",
     "Language.Spanish": "Spanish",
     "Language.German": "German",
-    
+
     "Start.StartNewExperience": "Start a new experience",
 
-    "Login.Title.Login": "Log in",
+    "Login.Title.Login": "Login",
     "Login.Label.Email": "Email",
     "Login.Placeholder.Email": "Enter your email here",
     "Login.Label.Password": "Password",
     "Login.Placeholder.Password": "Enter your password here",
     "Login.Button.Login": "Log in",
+    "Login.Button.GoDuoc": "My DUOC route",
     "Login.Button.Signin": "Sign up",
-    "Login.Button.Myroute": "My DUOC route",
-    "Login.Button.ForgotPassword": "Forgot password",
-    "Login.Button.DarkMode": "Dark Mode",
+    "Login.Button.ForgotPassword": "Forgot my password",
+    "Login.Button.DarkMode": "Dark",
 
-    "WelcomePage.Title.Wellcome": "Welcome to Angry-Dinosaurs!",
+    "WelcomePage.Title.Wellcome": "Welcome to the DUOCUC attendance system!",
 
     "HomePage.Button.Wellcome": "Home",
-    "HomePage.Button.class": "My class",
+    "HomePage.Button.class": "My Class",
     "HomePage.Button.Scan": "Scan",
     "HomePage.Button.datos": "My data",
     "HomePage.Button.Forum": "Forum",
 
-    "ThemePage.Label.ColorTheme": "Color theme:",
+    "ThemePage.Label.ColorTheme": "Color Theme:",
     "ThemePage.Color.Light": "Light",
     "ThemePage.Color.Dark": "Dark",
     "ThemePage.Color.Green": "Green",
     "ThemePage.Color.Red": "Red",
-    "ThemePage.Color.Facebook": "Facebook",
-    "ThemePage.Color.Instagram": "Instagram",
     "ThemePage.Color.Duoc": "DUOC",
-    
+
     "ThemePage.Button.Primary": "Primary Button",
     "ThemePage.Button.Secondary": "Secondary Button",
     "ThemePage.Button.Tertiary": "Tertiary Button",
@@ -46,24 +45,24 @@
     "ThemePage.Button.Light": "Light Button",
     "ThemePage.Button.Dark": "Dark Button",
     "ThemePage.Button.Home": "Home",
-    "ThemePage.Button.Logout": "Log out",
-    
+    "ThemePage.Button.Logout": "Log Out",
+
     "ThemePage.Card.Title": "Card Title",
     "ThemePage.Card.Subtitle": "Card Subtitle",
-    "ThemePage.Card.Content": "This is the card content. You can customize the card colors and its content.",
-    
+    "ThemePage.Card.Content": "This is the card content. You can customize the card's colors and its content.",
+
     "ThemePage.List.Title": "Lists",
     "ThemePage.List.Item1": "List Item 1",
     "ThemePage.List.Item2": "List Item 2",
     "ThemePage.List.Item3": "List Item 3",
-    
+
     "ThemePage.Calendar.Title": "Calendars",
-    
+
     "ThemePage.Form.Title": "Data Entry",
     "ThemePage.Form.NameLabel": "Name",
     "ThemePage.Form.NamePlaceholder": "Enter your name",
     "ThemePage.Form.DescriptionLabel": "Description",
     "ThemePage.Form.DescriptionPlaceholder": "Write a description here...",
     "ThemePage.Form.ToggleLabel": "Enable notifications",
-    "ThemePage.Form.CheckboxLabel": "I accept the terms"
+    "ThemePage.Form.CheckboxLabel": "I agree to the terms"
 }

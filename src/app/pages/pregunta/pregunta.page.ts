@@ -1,5 +1,6 @@
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { Usuario } from 'src/app/model/usuario';
+import { User } from 'src/app/model/user';
 import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { AnimationController, LoadingController, ToastController } from '@ionic/angular';
 

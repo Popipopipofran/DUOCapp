@@ -8,7 +8,7 @@
     </div>
     <div slot="end" class="ion-margin">
       <ion-button color="warning" shape="round" size="small" (click)="navigateTheme()">
-        Tema
+        {{ 'Theme' | translate }}
         <ion-icon slot="start" name="color-wand-outline"></ion-icon>
       </ion-button>
     </div>
@@ -67,16 +67,16 @@
 </ion-content>
 
 <ion-footer>
-  
-  <!-- boton registrarse -->
-  <!--<ion-button color="primary" shape="block" (click)="registerNewUser()"> 
-    {{ 'Login.Button.Signin' | translate }}
-  </ion-button>-->
+  <ion-button>
+
+  </ion-button>
 
   <ion-button color="primary" shape="block" (click)="showMap()">
     {{ 'Login.Button.GoDuoc' | translate }}
   </ion-button>
 
+
+  
   <ion-button color="primary" shape="block" (click)="passwordRecovery()">
     {{ 'Login.Button.ForgotPassword' | translate }}
   </ion-button>

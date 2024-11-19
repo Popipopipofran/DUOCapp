@@ -7,7 +7,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LanguageComponent } from 'src/app/components/language/language.component';
 import { Router } from '@angular/router';
 import { colorWandOutline } from 'ionicons/icons';
-import { addIcons } from 'ionicons';
+import { addIcons } from 'ionicons'; 
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -69,6 +69,7 @@ export class LoginPage implements ViewWillEnter {
   }
 
   passwordRecovery() {
+    console.log('Navegando a la página de recuperación de contraseña');
     this.router.navigate(['/pregunta']);
   }
 

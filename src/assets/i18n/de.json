@@ -1,26 +1,27 @@
 {
-  "AppName": "DUOC Assistenzsystem",
+  "AppName": "DUOC Anwesenheitssystem",
   "AuthorText": "Entwickelt von:",
-  "Author": "Bastian Cabezas, Zichao Yuan, Saul Vega, Francisca Otarola",
+  "Author": "Bastian Cabezas, Zichao Yuan, Saul Vega, Francisca Otarola, Saul Vega",
   "Language": "Sprache",
+  "Theme": "Thema",
   "Language.English": "Englisch",
   "Language.Spanish": "Spanisch",
   "Language.German": "Deutsch",
-  
-  "Start.StartNewExperience": "Starte ein neues Erlebnis",
+
+  "Start.StartNewExperience": "Beginnen Sie ein neues Erlebnis",
 
   "Login.Title.Login": "Anmelden",
   "Login.Label.Email": "E-Mail",
-  "Login.Placeholder.Email": "Gib hier deine E-Mail-Adresse ein",
+  "Login.Placeholder.Email": "Geben Sie hier Ihre E-Mail ein",
   "Login.Label.Password": "Passwort",
-  "Login.Placeholder.Password": "Gib hier dein Passwort ein",
+  "Login.Placeholder.Password": "Geben Sie hier Ihr Passwort ein",
   "Login.Button.Login": "Einloggen",
+  "Login.Button.GoDuoc": "Meine DUOC-Route",
   "Login.Button.Signin": "Registrieren",
-  "Login.Button.Myroute": "Meine DUOC Route",
   "Login.Button.ForgotPassword": "Passwort vergessen",
-  "Login.Button.DarkMode": "Dunkelmodus",
+  "Login.Button.DarkMode": "Dunkel",
 
-  "WelcomePage.Title.Wellcome": "Willkommen bei Angry-Dinosaurs!",
+  "WelcomePage.Title.Wellcome": "Willkommen im DUOCUC Anwesenheitssystem!",
 
   "HomePage.Button.Wellcome": "Startseite",
   "HomePage.Button.class": "Mein Kurs",
@@ -28,42 +29,40 @@
   "HomePage.Button.datos": "Meine Daten",
   "HomePage.Button.Forum": "Forum",
 
-  "ThemePage.Label.ColorTheme": "Farbschema:",
+  "ThemePage.Label.ColorTheme": "Farben Thema:",
   "ThemePage.Color.Light": "Hell",
   "ThemePage.Color.Dark": "Dunkel",
   "ThemePage.Color.Green": "Grün",
   "ThemePage.Color.Red": "Rot",
-  "ThemePage.Color.Facebook": "Facebook",
-  "ThemePage.Color.Instagram": "Instagram",
   "ThemePage.Color.Duoc": "DUOC",
-  
-  "ThemePage.Button.Primary": "Primär-Button",
-  "ThemePage.Button.Secondary": "Sekundär-Button",
-  "ThemePage.Button.Tertiary": "Tertiär-Button",
-  "ThemePage.Button.Success": "Erfolgs-Button",
-  "ThemePage.Button.Warning": "Warnungs-Button",
-  "ThemePage.Button.Danger": "Gefahren-Button",
+
+  "ThemePage.Button.Primary": "Primär Button",
+  "ThemePage.Button.Secondary": "Sekundär Button",
+  "ThemePage.Button.Tertiary": "Tertiär Button",
+  "ThemePage.Button.Success": "Erfolgs Button",
+  "ThemePage.Button.Warning": "Warnungs Button",
+  "ThemePage.Button.Danger": "Gefahren Button",
   "ThemePage.Button.Light": "Heller Button",
   "ThemePage.Button.Dark": "Dunkler Button",
   "ThemePage.Button.Home": "Startseite",
-  "ThemePage.Button.Logout": "Abmelden",
-  
-  "ThemePage.Card.Title": "Kartentitel",
-  "ThemePage.Card.Subtitle": "Kartensubtitel",
-  "ThemePage.Card.Content": "Dies ist der Inhalt der Karte. Du kannst die Farben und den Inhalt der Karte anpassen.",
-  
+  "ThemePage.Button.Logout": "Ausloggen",
+
+  "ThemePage.Card.Title": "Karten Titel",
+  "ThemePage.Card.Subtitle": "Karten Untertitel",
+  "ThemePage.Card.Content": "Dies ist der Inhalt der Karte. Sie können die Farben der Karte und deren Inhalt anpassen.",
+
   "ThemePage.List.Title": "Listen",
   "ThemePage.List.Item1": "Listenpunkt 1",
   "ThemePage.List.Item2": "Listenpunkt 2",
   "ThemePage.List.Item3": "Listenpunkt 3",
-  
+
   "ThemePage.Calendar.Title": "Kalender",
-  
-  "ThemePage.Form.Title": "Dateneingabe",
+
+  "ThemePage.Form.Title": "Daten Eingabe",
   "ThemePage.Form.NameLabel": "Name",
-  "ThemePage.Form.NamePlaceholder": "Gib deinen Namen ein",
+  "ThemePage.Form.NamePlaceholder": "Geben Sie Ihren Namen ein",
   "ThemePage.Form.DescriptionLabel": "Beschreibung",
-  "ThemePage.Form.DescriptionPlaceholder": "Schreibe hier eine Beschreibung...",
+  "ThemePage.Form.DescriptionPlaceholder": "Schreiben Sie hier eine Beschreibung...",
   "ThemePage.Form.ToggleLabel": "Benachrichtigungen aktivieren",
-  "ThemePage.Form.CheckboxLabel": "Ich akzeptiere die Bedingungen"
+  "ThemePage.Form.CheckboxLabel": "Ich stimme den Bedingungen zu"
 }

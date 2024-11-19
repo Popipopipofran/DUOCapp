@@ -3,7 +3,8 @@
     "AuthorText": "Desarrollado por:",
     "Author": "Bastian Cabezas,Zichao Yuan,Saul Vega,Francisca Otarola, Saul Vega",
     "Language": "Idioma",
-    "Language.English": "English",
+    "Theme": "Tema",
+    "Language.English": "Ingles",
     "Language.Spanish": "Español",
     "Language.German": "Aleman",
     
@@ -33,8 +34,6 @@
     "ThemePage.Color.Dark": "Oscuro",
     "ThemePage.Color.Green": "Verde",
     "ThemePage.Color.Red": "Rojo",
-    "ThemePage.Color.Facebook": "Facebook",
-    "ThemePage.Color.Instagram": "Instagram",
     "ThemePage.Color.Duoc": "DUOC",
     
     "ThemePage.Button.Primary": "Botón Primario",

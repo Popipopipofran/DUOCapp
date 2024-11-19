@@ -3,9 +3,12 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import localeEn from '@angular/common/locales/en';
+import localeDe from '@angular/common/locales/de';
 import { FormsModule } from '@angular/forms';
 import { addIcons } from 'ionicons';
 import { calendar } from 'ionicons/icons';
+import { TranslateService } from '@ngx-translate/core';
 
 registerLocaleData(localeEs); // Registrar el idioma español
 
@@ -34,15 +37,23 @@ export class DatePickerComponent implements ControlValueAccessor {
   selectedDateText: string;  // Texto ingresado manualmente en la caja de texto
   showCalendar: boolean = false;  // Controla la visibilidad del ion-datetime
 
+  currentLocale: string = 'es'; //idioma predeterminado
+
+
   // Callbacks para ControlValueAccessor (inicializados por defecto)
   private onChange: (date: Date) => void = () => {};
   private onTouched: () => void = () => {};
 
-  constructor() {
+  constructor(private translate: TranslateService) {
     this.selectedDate = new Date();  // Fecha por defecto (hoy)
     this.selectedDateISO = this.selectedDate.toISOString();  // ISO para ion-datetime
     this.selectedDateText = this.formatDate(this.selectedDate);  // Inicializar caja de texto
     addIcons({ calendar });
+
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLocale = event.lang;
+  });
+  
   }
 
   // Método que se llama cuando el usuario cambia la fecha en el ion-datetime
