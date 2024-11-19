@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { loginGuard } from './guards/login.guard';
 import { homeGuard } from './guards/home.guard';
 
-
 export const routes: Routes = [
   {
     path: '',
@@ -14,11 +13,6 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage),
     canActivate: [loginGuard]
   },
-
-  //{
-  // path: 'pregunta', component: PreguntaPage.page
-  //},
-  
   {
     path: 'map',
     loadComponent: () => import('./pages/map/map.page').then( m => m.MapPage),
@@ -31,5 +25,10 @@ export const routes: Routes = [
     path: 'home',
     loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
   },
+  {
+    path: 'pregunta',
+    loadComponent: () => import('./pages/pregunta/pregunta.page').then( m => m.PreguntaPage)
+  },
+
 
 ];

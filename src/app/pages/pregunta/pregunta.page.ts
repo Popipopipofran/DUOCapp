@@ -1,18 +1,23 @@
-import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonItem, IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonIcon, IonCard, IonLabel, IonCardSubtitle, IonRow, IonCol, IonFooter, IonTabButton } from '@ionic/angular/standalone';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/usuario';
-import { User } from 'src/app/model/user';
-import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { AnimationController, LoadingController, ToastController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-pregunta',
   templateUrl: './pregunta.page.html',
   styleUrls: ['./pregunta.page.scss'],
+  standalone: true,
+  imports: [IonTabButton, IonFooter, IonCol, IonRow, IonItem, IonCardSubtitle, IonCard, IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, CommonModule, FormsModule, IonButton]
 })
 export class PreguntaPage implements OnInit {
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
 
-  public usuario?: Usuario; 
+  public usuario?: Usuario;
   public respuesta: string = '';
 
   constructor(
