@@ -1,11 +1,14 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonFooter, IonTabButton, IonIcon } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-incorrecto',
   templateUrl: './incorrecto.page.html',
   styleUrls: ['./incorrecto.page.scss'],
+  standalone: true,
+  imports: [IonIcon, IonTabButton, IonFooter, IonCard, IonContent, IonTitle, IonToolbar, IonHeader, ]
 })
 export class IncorrectoPage implements OnInit, AfterViewInit {
   public mensaje: string = '';
