@@ -1,16 +1,20 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, viewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonFooter, IonTabButton, IonIcon } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-correcto',
   templateUrl: './correcto.page.html',
   styleUrls: ['./correcto.page.scss'],
+  standalone: true,
 })
 export class CorrectoPage implements OnInit, AfterViewInit {
   public mensaje: string = '';
 
-  @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
+  readonly itemTitulo = viewChild.required('titulo', { read: ElementRef });
+
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -31,10 +35,11 @@ export class CorrectoPage implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit(): void {
-    if (this.itemTitulo) {
+    const itemTitulo = this.itemTitulo();
+    if (itemTitulo) {
       const animation = this.animationController
         .create()
-        .addElement(this.itemTitulo.nativeElement)
+        .addElement(itemTitulo.nativeElement)
         .iterations(Infinity)
         .duration(3000)
         .fromTo('transform', 'translateX(0%)', 'translateX(100%)')
