@@ -33,7 +33,8 @@
 
       <ion-item>
         <ion-label position="floating">Nivel educacional</ion-label>
-        <ion-input [value]="user.educationalLevel" disabled></ion-input>
+       <!-- <ion-input [value]="user.educationalLevel" disabled></ion-input> -->
+        <ion-input type="text" disabled >{{ user.educationalLevel }}</ion-input> 
       </ion-item>
 
       <ion-item>
