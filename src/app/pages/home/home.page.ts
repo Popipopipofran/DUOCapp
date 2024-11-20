@@ -8,6 +8,7 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { QrWebScannerComponent } from 'src/app/components/qr-web-scanner/qr-web-scanner.component';
 import { Clase } from 'src/app/model/clase';
+import { Router } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
 import { ScannerService } from 'src/app/services/scanner.service';
 import { WelcomeComponent } from 'src/app/components/welcome/welcome.component';
@@ -51,9 +52,14 @@ export class HomePage {
         this.showClaseComponent(await this.scanner.scan());
   }
 
-  webQrScanned(qr: string) {
-    this.showClaseComponent(qr);
-  }
+  webQrScanned(data: string) {
+    if (Clase.isValidClaseQrCode(data)) {
+      this.auth.qrCodeData.next(data);
+      this.changeComponent('miclase');
+    } else {
+      this.changeComponent('welcome');
+    }
+  } 
 
   webQrStopped() {
     this.changeComponent('welcome');

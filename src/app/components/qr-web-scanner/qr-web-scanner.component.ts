@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Output, ViewChild, OnDestroy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { Router } from '@angular/router';
 import { EventEmitter } from '@angular/core';
 import jsQR, { QRCode } from 'jsqr';
 
@@ -22,8 +23,7 @@ export class QrWebScannerComponent implements OnDestroy {
   qrData: string = '';
   mediaStream: MediaStream | null = null; // Almacena el flujo de medios
 
-  constructor() 
-  { 
+  constructor(private router: Router) { 
     this.startQrScanningForWeb();
   }
 
@@ -59,7 +59,7 @@ export class QrWebScannerComponent implements OnDestroy {
       const data = qrCode.data;
       if (data !== '') {
         this.stopCamera();
-        this.scanned.emit(qrCode.data);
+        this.scanned.emit(data);
         return true;
       }
     }
@@ -80,6 +80,7 @@ export class QrWebScannerComponent implements OnDestroy {
     if (this.mediaStream) {
       this.mediaStream.getTracks().forEach(track => track.stop()); // Detén todas las pistas de video
       this.mediaStream = null; // Limpia el flujo de medios
+      this.router.navigate(['/miclase']);
     }
   }
 
