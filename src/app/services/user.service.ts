@@ -1,19 +1,21 @@
+// src/app/services/user.service.ts
+
 import { Injectable } from '@angular/core';
-import { Usuario } from '../model/usuario';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private usuarioAutenticado: Usuario | null = null;
+  private usuarioAutenticado: User | null = null;
 
   // Guardar el usuario autenticado
-  setUsuarioAutenticado(usuario: Usuario) {
+  setUsuarioAutenticado(usuario: User) {
     this.usuarioAutenticado = usuario;
   }
 
   // Obtener el usuario autenticado
-  obtenerUsuarioAutenticado(): Usuario | null {
+  obtenerUsuarioAutenticado(): User | null {
     const storedUser = sessionStorage.getItem('usuario');
     if (storedUser) {
       const usuario = JSON.parse(storedUser);
@@ -22,13 +24,12 @@ export class UserService {
     return this.usuarioAutenticado;
   }
 
-  actualizarUsuario(usuarioActualizado: Usuario): boolean {
-    if (this.usuarioAutenticado?.correo === usuarioActualizado.correo) {
+  actualizarUsuario(usuarioActualizado: User): boolean {
+    if (this.usuarioAutenticado?.email === usuarioActualizado.email) {
       this.usuarioAutenticado = usuarioActualizado;  // Actualiza el usuario autenticado en memoria
       sessionStorage.setItem('usuario', JSON.stringify(usuarioActualizado));
       return true;
     }
     return false;
   }
-  
 }

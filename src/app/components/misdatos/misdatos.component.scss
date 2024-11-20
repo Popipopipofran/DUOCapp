@@ -25,7 +25,7 @@ ion-row {
 }
 
 /* Estilo de las columnas */
-ion-col {
+ion-input {
   font-size: 14px;
   padding: 8px;
   font-weight: normal;
@@ -33,14 +33,14 @@ ion-col {
 }
 
 /* Estilo para las etiquetas de la izquierda (títulos) */
-ion-col:first-child {
+ion-input:first-child {
   color: #f0f0f0; /* Gris claro casi blanco para mejor visibilidad */
   font-weight: 600;
   text-align: left;
 }
 
 /* Estilo para los valores */
-ion-col:last-child {
+ion-input:last-child {
   color: var(--ion-color-primary-tint); /* Color ligeramente resaltado */
   font-weight: 500;
   text-align: right;

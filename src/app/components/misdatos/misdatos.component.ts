@@ -1,6 +1,4 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
-import { NivelEducacional } from 'src/app/model/nivel-educacional';
-import { Usuario } from 'src/app/model/usuario';
 import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/services/user.service';
 import { AnimationController } from '@ionic/angular';
@@ -26,31 +24,29 @@ import { AuthService } from 'src/app/services/auth.service';
     , IonFab, IonFabButton, IonFabList
     , CommonModule, FormsModule, IonSelectOption]
 })
-export class MisdatosComponent implements OnInit, AfterViewInit{
+export class MisdatosComponent implements OnInit, AfterViewInit {
   user: User = new User();
-  
-  @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef; public usuario: Usuario = new Usuario('', '', '', '', '', '');
 
-  fechaNacimiento: string = '';
-  idNivelEducacional: number = 0;
-
-  nivelesEducacionales: NivelEducacional[] = [];
+  @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
 
   ngOnInit() {
+    console.log(this.user.educationalLevel);
+   }
 
-  }
   
 
-  constructor(private userService: UserService,private loadingController: LoadingController,
-    private animationController: AnimationController, private auth: AuthService) {
-
-      this.auth.authUser.subscribe((user) => {
-        console.log(user);
-        if (user) {
-          this.user = user;
-        }
-      });
-    }
+  constructor(
+    private userService: UserService,
+    private loadingController: LoadingController,
+    private animationController: AnimationController,
+    private auth: AuthService
+  ) {
+    this.auth.authUser.subscribe((user) => {
+      if (user) {
+        this.user = user;
+      }
+    });
+  }
 
   ngAfterViewInit(): void {
     if (this.itemTitulo) {
@@ -65,56 +61,56 @@ export class MisdatosComponent implements OnInit, AfterViewInit{
     }
   }
 
-  cargarNivelesEducacionales() {
-    this.nivelesEducacionales = new NivelEducacional().getNivelesEducacionales();
-  }
-
   cambiarNombre(event: any) {
-    this.usuario.nombre = event;
+    this.user.firstName = event;
   }
 
   cambiarApellido(event: any) {
-    this.usuario.apellido = event;
+    this.user.lastName = event;
   }
 
-  cambiarFechaNacimiento(event: any) {
-    this.fechaNacimiento = event;
-  }
-
-  cambiarNivelEducacional(event: any) {
-    this.idNivelEducacional = event;
+  cambiarCorreo(event: any) {
+    this.user.email = event;
   }
 
   limpiarFormulario() {
-    this.usuario = new Usuario('', '', '', '', '', '');
-    this.fechaNacimiento = '';
-    this.idNivelEducacional = 0;
+    this.user = new User();
   }
 
-  mostrarDatosusuario() {
-    const usuarioAutenticado = this.userService.obtenerUsuarioAutenticado();
-    if (usuarioAutenticado) {
-      this.usuario = usuarioAutenticado;
-      this.idNivelEducacional = this.usuario.nivelEducacional.id;
-      this.fechaNacimiento = this.usuario.fechaNacimiento;
-      console.log('Datos del usuario cargados:', this.usuario);
-    } else {
-      alert('No hay usuario autenticado.');
-    }
-  }  
+  mostrarDatosUsuario() {
+    console.log('Datos del usuario cargados:', this.user);
+  }
 
-  actualizarDatos() {
-    const actualizado = this.userService.actualizarUsuario(this.usuario);
-    
+  actualizarDatos(): void {
+    const usuarioActualizado = {
+      correo: this.user.email,
+      nombre: this.user.firstName,
+      apellido: this.user.lastName,
+      preguntaSecreta: this.user.secretQuestion || '',
+      respuestaSecreta: this.user.secretAnswer || '',
+      direccion: this.user.address || '',
+      contraseña: this.user.password || '',
+    };
+
+    const actualizado = (usuarioActualizado);
+
     if (actualizado) {
       alert('Datos actualizados correctamente.');
     } else {
       alert('Error al actualizar los datos.');
     }
   }
-  
+
   get nombreUsuario(): string {
-    return this.usuario.correo.split('@')[0]; 
+    return this.user.email.split('@')[0];
   }
 
+  // Método para formatear la fecha en dd-mm-yyyy
+  formatFechaNacimiento(date: string): string {
+    const dateObj = new Date(date);
+    const day = String(dateObj.getDate()).padStart(2, '0');
+    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+    const year = dateObj.getFullYear();
+    return `${day}-${month}-${year}`;
+  }
 }
