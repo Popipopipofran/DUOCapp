@@ -69,7 +69,7 @@ export class HomePage {
 
     if (Clase.isValidClaseQrCode(qr)) {
       this.auth.qrCodeData.next(qr);
-      this.changeComponent('clase');
+      this.changeComponent('miclase');
       return;
     }
     
