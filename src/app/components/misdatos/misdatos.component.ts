@@ -3,11 +3,7 @@ import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/services/user.service';
 import { AnimationController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
-import { IonFabButton, IonFab, IonList, IonCardContent, IonHeader
-  , IonToolbar, IonTitle, IonCard, IonCardHeader, IonCardTitle
-  , IonCardSubtitle, IonItem, IonLabel, IonInput, IonTextarea
-  , IonGrid, IonRow, IonCol, IonButton, IonIcon, IonContent
-  , IonFabList, IonSelectOption } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
@@ -18,12 +14,7 @@ import { ToastController } from '@ionic/angular';
   templateUrl: './misdatos.component.html',
   styleUrls: ['./misdatos.component.scss'],
   standalone: true,
-  imports: [IonList, IonHeader, IonToolbar, IonTitle, IonCard
-    , IonCardHeader, IonCardTitle, IonCardSubtitle, IonItem
-    , IonLabel, IonInput, IonTextarea, IonGrid, IonRow, IonCol
-    , IonButton, IonIcon, IonContent, IonCardContent
-    , IonFab, IonFabButton, IonFabList
-    , CommonModule, FormsModule, IonSelectOption]
+  imports: [IonicModule, CommonModule, FormsModule]
 })
 export class MisdatosComponent implements OnInit, AfterViewInit {
   user: User = new User();
@@ -119,12 +110,5 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
     return this.user.email.split('@')[0];
   }
 
-  // Método para formatear la fecha en dd-mm-yyyy
-  formatFechaNacimiento(date: string): string {
-    const dateObj = new Date(date);
-    const day = String(dateObj.getDate()).padStart(2, '0');
-    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-    const year = dateObj.getFullYear();
-    return `${day}-${month}-${year}`;
-  }
+
 }
