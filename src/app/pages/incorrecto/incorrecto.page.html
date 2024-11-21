@@ -1,32 +1,33 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title #titulo class="front-size-19">
-      <img class="logo-header" src="/assets/images/logo-duoc.png" alt="Duoc UC">
-    </ion-title>
-  </ion-toolbar>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title class="ion-text-left ion-text">
+            <h3><ion-img class="logo-header" src= ..\assets\images\logo-duoc.png alt="Duoc UC"></ion-img></h3>
+      </ion-title>
+      <div slot="end">
+        <ion-button (click)="logout()" size="small" fill="clear">
+          <ion-icon name="log-out-outline" color="white">
+          </ion-icon>
+        </ion-button>
+      </div>
+    </ion-toolbar>
+  </ion-header>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding-horizontal background-image">
-  <br>
-  <ion-title class="ion-text-center">
-    <h2 class="title-card">Sistema de Asistencia DUOC</h2>
-  </ion-title>
 
+<ion-content [fullscreen]="true" class=" background-image">
+  <br><br><br><br>
   <ion-card class="ion-text-center ion-padding-vertical">
     <div class="custom-image-container">
-      <img src=".../assets/img/2.jpg" alt="Incorrecta" class="custom-image">
+      <ion-img src="assets/images/2.jpg" alt="Incorrecta" class="custom-image"></ion-img>
       <p class="overlay-text">{{ mensaje }}</p>
     </div>
   </ion-card>
 </ion-content>
 
-<ion-footer>
   <ion-toolbar color="primary">
-    <ion-title class="ion-text-left">
-      <ion-tab-button tab="login" routerLink="/login" routerLinkActive="active-tab">
+      <ion-tab-button tab="login" (click)="logout()" routerLinkActive="active-tab">
         <ion-icon name="log-in-outline"></ion-icon>
-        Iniciar Sesión
+       <h4>Volver al inicio de sesion</h4>
       </ion-tab-button>
-    </ion-title>
   </ion-toolbar>
-</ion-footer>

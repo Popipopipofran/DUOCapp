@@ -1,9 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonItem, IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonIcon, IonCard, IonLabel, IonCardSubtitle, IonRow, IonCol, IonFooter, IonTabButton } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { Usuario } from 'src/app/model/usuario';
+import { User } from 'src/app/model/user';
 import { AnimationController, LoadingController, ToastController } from '@ionic/angular';
 
 
@@ -12,12 +13,12 @@ import { AnimationController, LoadingController, ToastController } from '@ionic/
   templateUrl: './pregunta.page.html',
   styleUrls: ['./pregunta.page.scss'],
   standalone: true,
-  imports: [IonTabButton, IonFooter, IonCol, IonRow, IonItem, IonCardSubtitle, IonCard, IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, CommonModule, FormsModule, IonButton]
+  imports: [IonicModule, CommonModule, FormsModule]
 })
 export class PreguntaPage implements OnInit {
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
 
-  public usuario?: Usuario;
+  public usuario?: User;
   public respuesta: string = '';
 
   constructor(
@@ -25,7 +26,8 @@ export class PreguntaPage implements OnInit {
     private router: Router,
     private loadingController: LoadingController,
     private animationController: AnimationController,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private authService: AuthService,
   ) {
     this.activatedRoute.queryParams.subscribe(params => {
       const navigation = this.router.getCurrentNavigation();
@@ -52,6 +54,10 @@ export class PreguntaPage implements OnInit {
 
   ngOnInit() { }
 
+  logout() {
+    this.authService.logout();
+  }
+
   public async validarRespuestaSecreta(): Promise<void> {
 
     const loading = await this.loadingController.create({
@@ -60,7 +66,7 @@ export class PreguntaPage implements OnInit {
     await loading.present();
 
 
-    if (this.usuario && this.usuario.respuestaSecreta === this.respuesta) {
+    if (this.usuario && this.usuario.secretAnswer === this.respuesta) {
 
       await loading.dismiss();
       const toast = await this.toastController.create({

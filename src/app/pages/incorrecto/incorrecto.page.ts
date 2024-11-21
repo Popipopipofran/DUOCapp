@@ -1,14 +1,15 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonFooter, IonTabButton, IonIcon } from "@ionic/angular/standalone";
+import { IonicModule } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-incorrecto',
   templateUrl: './incorrecto.page.html',
   styleUrls: ['./incorrecto.page.scss'],
   standalone: true,
-  imports: [IonIcon, IonTabButton, IonFooter, IonCard, IonContent, IonTitle, IonToolbar, IonHeader, ]
+  imports: [IonicModule, ]
 })
 export class IncorrectoPage implements OnInit, AfterViewInit {
   public mensaje: string = '';
@@ -18,7 +19,8 @@ export class IncorrectoPage implements OnInit, AfterViewInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private animationController: AnimationController
+    private animationController: AnimationController,
+    private authService: AuthService
   ) {
 
     this.activatedRoute.queryParams.subscribe(params => {
@@ -32,6 +34,10 @@ export class IncorrectoPage implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {}
+
+  logout() {
+    this.authService.logout();
+  }
 
   ngAfterViewInit(): void {
     if (this.itemTitulo) {

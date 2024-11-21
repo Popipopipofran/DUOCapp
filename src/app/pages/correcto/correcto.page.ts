@@ -1,13 +1,15 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonFooter, IonTabButton, IonIcon } from "@ionic/angular/standalone";
+import { IonicModule } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-correcto',
   templateUrl: './correcto.page.html',
   styleUrls: ['./correcto.page.scss'],
   standalone: true,
+  imports: [IonicModule]
 })
 export class CorrectoPage implements OnInit, AfterViewInit {
   public mensaje: string = '';
@@ -19,7 +21,8 @@ export class CorrectoPage implements OnInit, AfterViewInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private animationController: AnimationController
+    private animationController: AnimationController,
+    private authService: AuthService,
   ) {
 
     this.activatedRoute.queryParams.subscribe(params => {
@@ -45,5 +48,9 @@ export class CorrectoPage implements OnInit, AfterViewInit {
         .fromTo('opacity', 0.2, 1);
       animation.play();
     }
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

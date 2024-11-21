@@ -70,7 +70,7 @@ export class LoginPage implements ViewWillEnter {
 
   passwordRecovery() {
     console.log('Navegando a la página de recuperación de contraseña');
-    this.router.navigate(['/pregunta']);
+    this.router.navigate(['/correo']);
   }
 
   showMap() {

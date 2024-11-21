@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { showAlertError, showToast } from 'src/app/tools/message-functions';
-import { User } from '../model//user';
+import { User } from '../model/user';
 import { Storage } from '@ionic/storage-angular';
-import { DatabaseService } from './database.service';
+import { DatabaseService } from './database.service'; // Asegúrate de tener un servicio de base de datos para la búsqueda
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,19 @@ export class AuthService {
 
   constructor(private router: Router, private db: DatabaseService, private storage: Storage) { }
 
+  // Método para obtener un usuario por correo
+  async getUsuarioByCorreo(correo: string): Promise<User | null> {
+    try {
+      // Buscar en la base de datos usando el servicio DatabaseService
+      const usuario = await this.db.findUserByEmail(correo);
+      return usuario ? usuario : null;
+    } catch (error) {
+      showAlertError('AuthService.getUsuarioByCorreo', error);
+      return null;
+    }
+  }
+
+  // Métodos de autenticación (login, logout, etc.)
   async initializeAuthService() {
     try {
       await this.storage.create();
@@ -116,37 +129,4 @@ export class AuthService {
       return false;
     }
   }
-
-  // async readQrFromStorage(): Promise<string | null> {
-  //   try {
-  //     const qrData = await this.storage.get(this.storageQrCodeKey) as string | null;
-  //     this.qrCodeData.next(qrData);
-  //     return qrData;
-  //   } catch (error) {
-  //     showAlertError('AuthService.readQrFromStorage', error);
-  //     return null;
-  //   }
-  // }
-
-  // async saveQrToStorage(qrData: string): Promise<string | null> {
-  //   try {
-  //     await this.storage.set(this.storageQrCodeKey, qrData);
-  //     this.qrCodeData.next(qrData);
-  //     return qrData;
-  //   } catch (error) {
-  //     showAlertError('AuthService.saveQrToStorage', error);
-  //     return null;
-  //   }
-  // }
-
-  // async deleteQrFromStorage(): Promise<boolean> {
-  //   try {
-  //     await this.storage.remove(this.storageQrCodeKey);
-  //     this.qrCodeData.next(null);
-  //     return true;
-  //   } catch (error) {
-  //     showAlertError('AuthService.deleteQrFromStorage', error);
-  //     return false;
-  //   }
-  // }
 }
