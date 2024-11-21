@@ -11,6 +11,7 @@ import { IonFabButton, IonFab, IonList, IonCardContent, IonHeader
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-misdatos',
@@ -39,7 +40,8 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
     private userService: UserService,
     private loadingController: LoadingController,
     private animationController: AnimationController,
-    private auth: AuthService
+    private auth: AuthService,
+    private toastController: ToastController
   ) {
     this.auth.authUser.subscribe((user) => {
       if (user) {
@@ -81,6 +83,16 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
     console.log('Datos del usuario cargados:', this.user);
   }
 
+  async mostrarToast(mensaje: string) {
+    const toast = await this.toastController.create({
+      message: mensaje,
+      duration: 2000, // Duración en milisegundos
+      position: 'bottom', // Posición del toast
+      color: 'success' // Cambia a 'danger' si es un mensaje de error
+    });
+    toast.present();
+  }
+
   actualizarDatos(): void {
     const usuarioActualizado = {
       correo: this.user.email,
@@ -94,10 +106,12 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
 
     const actualizado = (usuarioActualizado);
 
+
+    
     if (actualizado) {
-      alert('Datos actualizados correctamente.');
+      this.mostrarToast('Datos actualizados correctamente.');
     } else {
-      alert('Error al actualizar los datos.');
+      this.mostrarToast('Error al actualizar los datos.');
     }
   }
 
