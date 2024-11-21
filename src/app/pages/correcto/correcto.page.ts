@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ElementRef, viewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonFooter, IonTabButton, IonIcon } from "@ionic/angular/standalone";
@@ -12,7 +12,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonFooter, IonTab
 export class CorrectoPage implements OnInit, AfterViewInit {
   public mensaje: string = '';
 
-  readonly itemTitulo = viewChild.required('titulo', { read: ElementRef });
+  @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;  // Corregido
 
 
 
@@ -35,11 +35,10 @@ export class CorrectoPage implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit(): void {
-    const itemTitulo = this.itemTitulo();
-    if (itemTitulo) {
+    if (this.itemTitulo) {
       const animation = this.animationController
         .create()
-        .addElement(itemTitulo.nativeElement)
+        .addElement(this.itemTitulo.nativeElement)
         .iterations(Infinity)
         .duration(3000)
         .fromTo('transform', 'translateX(0%)', 'translateX(100%)')

@@ -63,8 +63,6 @@ export class PreguntaPage implements OnInit {
     if (this.usuario && this.usuario.respuestaSecreta === this.respuesta) {
 
       await loading.dismiss();
-
-
       const toast = await this.toastController.create({
         message: 'Respuesta correcta. Redirigiendo...',
         duration: 2000,
@@ -79,10 +77,9 @@ export class PreguntaPage implements OnInit {
         },
       };
       this.router.navigate(['/correcto'], navigationExtras);
-    } else {
-    
-      await loading.dismiss();
 
+    } else {
+      await loading.dismiss();
       // esto es el mensaje de erroooooooraaaaaaaaaaaaaaaaa
       const toast = await this.toastController.create({
         message: 'Respuesta incorrecta. Intenta nuevamente.',
