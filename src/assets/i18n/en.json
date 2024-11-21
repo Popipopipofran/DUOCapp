@@ -64,5 +64,35 @@
     "ThemePage.Form.DescriptionLabel": "Description",
     "ThemePage.Form.DescriptionPlaceholder": "Write a description here...",
     "ThemePage.Form.ToggleLabel": "Enable notifications",
-    "ThemePage.Form.CheckboxLabel": "I agree to the terms"
+    "ThemePage.Form.CheckboxLabel": "I agree to the terms",
+
+    "WelcomePage": {
+  "Title": "Welcome",
+  "Subtitle": "Scan the QR",
+  "Description": "to register your attendance to classes!"
+},
+
+"ForumPage": {
+    "Title": {
+      "Management": "Post Management",
+      "RecentPosts": "Recent Posts"
+    },
+    "Label": {
+      "Title": "Title",
+      "Description": "Description"
+    },
+    "Placeholder": {
+      "Title": "Enter the title of the post",
+      "Description": "Write the content of the post"
+    },
+    "Button": {
+      "Clear": "Clear",
+      "Save": "Save",
+      "Update": "Update"
+    },
+    "Post": {
+    "Prefix": "(Post #{{ number }})"
+    }
+
+  }
 }

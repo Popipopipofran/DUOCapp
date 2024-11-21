@@ -64,5 +64,35 @@
     "ThemePage.Form.DescriptionLabel": "Descripción",
     "ThemePage.Form.DescriptionPlaceholder": "Escribe aquí una descripción...",
     "ThemePage.Form.ToggleLabel": "Activar notificaciones",
-    "ThemePage.Form.CheckboxLabel": "Acepto los términos"
+    "ThemePage.Form.CheckboxLabel": "Acepto los términos",
+
+    "WelcomePage": {
+    "Title": "Bienvenido(a)",
+    "Subtitle": "Escanea el QR",
+    "Description": "para registrar tu asistencia a clases!"
+  },
+  "ForumPage": {
+    "Title": {
+      "Management": "Gestión de Publicaciones",
+      "RecentPosts": "Publicaciones Recientes"
+    },
+    "Label": {
+      "Title": "Título",
+      "Description": "Descripción"
+    },
+    "Placeholder": {
+      "Title": "Ingresa el título de la publicación",
+      "Description": "Escribe el contenido de la publicación"
+    },
+    "Button": {
+      "Clear": "Limpiar",
+      "Save": "Guardar",
+      "Update": "Actualizar"
+    },
+    "Post": {
+      "Prefix": "(Publicación #{{ number }})"
+    }
+  }
+
+  
 }

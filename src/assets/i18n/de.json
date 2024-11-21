@@ -64,5 +64,35 @@
   "ThemePage.Form.DescriptionLabel": "Beschreibung",
   "ThemePage.Form.DescriptionPlaceholder": "Schreiben Sie hier eine Beschreibung...",
   "ThemePage.Form.ToggleLabel": "Benachrichtigungen aktivieren",
-  "ThemePage.Form.CheckboxLabel": "Ich stimme den Bedingungen zu"
+  "ThemePage.Form.CheckboxLabel": "Ich stimme den Bedingungen zu",
+
+  "WelcomePage": {
+  "Title": "Willkommen",
+  "Subtitle": "Scannen Sie den QR-Code",
+  "Description": "um Ihre Anwesenheit in den Kursen zu registrieren!"
+},
+
+"ForumPage": {
+  "Title": {
+    "Management": "Verwaltung von Beiträgen",
+    "RecentPosts": "Neueste Beiträge"
+  },
+  "Label": {
+    "Title": "Titel",
+    "Description": "Beschreibung"
+  },
+  "Placeholder": {
+    "Title": "Geben Sie den Titel des Beitrags ein",
+    "Description": "Schreiben Sie den Inhalt des Beitrags"
+  },
+  "Button": {
+    "Clear": "Löschen",
+    "Save": "Speichern",
+    "Update": "Aktualisieren"
+  },
+  "Post": {
+  "Prefix": "(Beitrag #{{ number }})"
+  }
+}
+
 }

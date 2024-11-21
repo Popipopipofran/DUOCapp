@@ -202,7 +202,10 @@ export class DatabaseService {
     try {
       const q = 'SELECT * FROM USER WHERE userName=?;';
       const rows = (await this.db.query(q, [userName])).values;
-      return rows?.length? this.rowToUser(rows[0]) : undefined;
+      if(rows?.length){
+        return rows?.length? this.rowToUser(rows[0]) : undefined;
+      }
+      return undefined;
     } catch (error) {
       showAlertError('DataBaseService.readUser', error);
       return undefined;
@@ -249,8 +252,11 @@ export class DatabaseService {
   async findUserByEmail(email: string): Promise<User | undefined> {
     try {
       const q = 'SELECT * FROM USER WHERE email=?;';
-      const rows = (await this.db.query(q, [email])).values;
-      return rows? this.rowToUser(rows[0]) : undefined;
+      const rows = (await this.db.query(q, [email])).values;   
+      if (rows?.length){
+        return rows? this.rowToUser(rows[0]) : undefined;
+      }
+      return undefined;
     } catch (error) {
       showAlertError('DataBaseService.findUserByEmail', error);
       return undefined;
