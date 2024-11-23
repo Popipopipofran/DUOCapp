@@ -19,6 +19,9 @@ import { ToastController } from '@ionic/angular';
 export class MisdatosComponent implements OnInit, AfterViewInit {
   user: User = new User();
 
+  password1: string = '';
+  password2: string = '';
+
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
 
   ngOnInit() {
