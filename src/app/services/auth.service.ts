@@ -83,29 +83,27 @@ export class AuthService {
     }
   }
 
-  async login(userName: string, password: string): Promise<boolean> {
+  async login(userName: string, password: string): Promise<boolean> {   
     try {
       const authUser = await this.storage.get(this.storageAuthUserKey);
-
+      // verifica si el usuario esta conectado
       if (authUser) {
         this.authUser.next(authUser);
         this.isFirstLogin.next(false);
         await this.router.navigate(['/home']);
         return true;
+      }
+      const user = await this.db.findUser(userName, password);
+      if (user) {
+        showToast(`¡Bienvenid@ ${user.firstName} ${user.lastName}!`);
+        await this.saveAuthUser(user);
+        this.isFirstLogin.next(true);
+        await this.router.navigate(['/home']);
+        return true;
       } else {
-        const user = await this.db.findUser(userName, password);
-
-        if (user) {
-          showToast(`¡Bienvenid@ ${user.firstName} ${user.lastName}!`);
-          await this.saveAuthUser(user);
-          this.isFirstLogin.next(true);
-          await this.router.navigate(['/home']);
-          return true;
-        } else {
-          showToast('El correo o la password son incorrectos');
-          await this.router.navigate(['/login']);
-          return false;
-        }
+        showToast('El correo o la password son incorrectos');
+        await this.router.navigate(['/login']);
+        return false;
       }
     } catch (error) {
       showAlertError('AuthService.login', error);
