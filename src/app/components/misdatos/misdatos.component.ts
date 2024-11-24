@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { ToastController } from '@ionic/angular';
+import { NivelEducacional } from  'src/app/model/nivel-educacional'
 
 @Component({
   selector: 'app-misdatos',
@@ -19,8 +20,8 @@ import { ToastController } from '@ionic/angular';
 export class MisdatosComponent implements OnInit, AfterViewInit {
   user: User = new User();
 
-  password1: string = '';
-  password2: string = '';
+  public password1: string = '';
+  public password2: string = '';
 
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
 
@@ -77,39 +78,33 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
     console.log('Datos del usuario cargados:', this.user);
   }
 
-  async mostrarToast(mensaje: string) {
+  async mostrarToast(mensaje: string, tipo: string = 'success') {
     const toast = await this.toastController.create({
       message: mensaje,
       duration: 2000, // Duración en milisegundos
       position: 'bottom', // Posición del toast
-      color: 'success' // Cambia a 'danger' si es un mensaje de error
+      color: tipo // Cambia a 'danger' si es un mensaje de error
     });
     toast.present();
   }
 
-  actualizarDatos(): void {
-    const usuarioActualizado = {
-      correo: this.user.email,
-      nombre: this.user.firstName,
-      apellido: this.user.lastName,
-      preguntaSecreta: this.user.secretQuestion || '',
-      respuestaSecreta: this.user.secretAnswer || '',
-      direccion: this.user.address || '',
-      contraseña: this.user.password || '',
-    };
-
-    const actualizado = (usuarioActualizado);
-
-
-    
-    if (actualizado) {
-      this.mostrarToast('Datos actualizados correctamente.');
+  async actualizarDatos(): Promise<void> {
+    console.log(this.password1, this.password2);
+    console.log(this.password1 !== '', this.password1 === this.password2)
+    if(this.password1 !== '' && this.password1 === this.password2) {
+      try {
+        const actualizado = await this.userService.actualizarUsuario(this.user);
+        this.mostrarToast('Datos actualizados correctamente.');
+      } catch (error) {
+        console.log(error);
+        this.mostrarToast('Error al actualizar los datos.', 'danger');
+      }
     } else {
-      this.mostrarToast('Error al actualizar los datos.');
+      this.mostrarToast('Las contraseñas tienen que ser iguales.', 'danger');
     }
   }
 
-  get nombreUsuario(): string {
+  get nombreUsuario(): string | any {
     return this.user.email.split('@')[0];
   }
 

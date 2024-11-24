@@ -18,6 +18,32 @@
       super();
     }
 
+    setUser ({
+      userName,
+      email,
+      password,
+      secretQuestion,
+      secretAnswer,
+      firstName,
+      lastName,
+      educationalLevel,
+      dateOfBirth,
+      address,
+      image
+    }: User) {
+      this.userName = userName
+      this.email = email
+      this.password = password
+      this.secretQuestion = secretQuestion
+      this.secretAnswer = secretAnswer
+      this.firstName = firstName
+      this.lastName = lastName
+      this.educationalLevel = educationalLevel
+      this.dateOfBirth = dateOfBirth
+      this.address = address
+      this.image = image
+    }
+
     static getNewUsuario(
       userName: string,
       email: string,

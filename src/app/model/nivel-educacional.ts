@@ -7,21 +7,21 @@ export class NivelEducacional {
     this.nombre = '';
   }
 
-  public getNivelEducacional(id: number, nombre: string): NivelEducacional {
+  public static getNivelEducacional(id: number, nombre: string): NivelEducacional {
     const nived = new NivelEducacional();
     nived.id = id;
     nived.nombre = nombre;
     return nived;
   }
 
-  public getNivelesEducacionales(): NivelEducacional[] {
+  public static getNivelesEducacionales(): NivelEducacional[] {
     const nivelesEducacionales = [];
-    nivelesEducacionales.push(this.getNivelEducacional(1, 'Básica Incompleta'));
-    nivelesEducacionales.push(this.getNivelEducacional(2, 'Básica Completa'));
-    nivelesEducacionales.push(this.getNivelEducacional(3, 'Media Incompleta'));
-    nivelesEducacionales.push(this.getNivelEducacional(4, 'Media Completa'));
-    nivelesEducacionales.push(this.getNivelEducacional(5, 'Superior Incompleta'));
-    nivelesEducacionales.push(this.getNivelEducacional(6, 'Superior Completa'));
+    nivelesEducacionales.push(NivelEducacional.getNivelEducacional(1, 'Básica Incompleta'));
+    nivelesEducacionales.push(NivelEducacional.getNivelEducacional(2, 'Básica Completa'));
+    nivelesEducacionales.push(NivelEducacional.getNivelEducacional(3, 'Media Incompleta'));
+    nivelesEducacionales.push(NivelEducacional.getNivelEducacional(4, 'Media Completa'));
+    nivelesEducacionales.push(NivelEducacional.getNivelEducacional(5, 'Superior Incompleta'));
+    nivelesEducacionales.push(NivelEducacional.getNivelEducacional(6, 'Superior Completa'));
     return nivelesEducacionales;
   }
 
@@ -31,11 +31,11 @@ export class NivelEducacional {
   }
 
  
-  public findNombreBy(id: number) {
+  public static findNombreBy(id: number) {
     if (id < 1 || id > 6) {
       return 'Sin nivel educacional';
     }
-    const nived = this.getNivelesEducacionales().find(n => n.id === id);
+    const nived = NivelEducacional.getNivelesEducacionales().find(n => n.id === id);
     if (nived !== undefined) {
      return nived.nombre;
     } else {
@@ -58,7 +58,7 @@ export class NivelEducacional {
     if (this.id < 1 || this.id > 6) {
       return 'No asignado';
     } else {
-      return this.id.toString() + ' - ' + this.findNombreBy(this.id);
+      return this.id.toString() + ' - ' + NivelEducacional.findNombreBy(this.id);
     }
   }
 }

@@ -1,7 +1,7 @@
 import { capSQLiteChanges, SQLiteDBConnection } from '@capacitor-community/sqlite';
 import { Injectable } from '@angular/core';
 import { SQLiteService } from './sqlite.service';
-import { User } from '../model//user';
+import { User } from '../model/user';
 import { BehaviorSubject } from 'rxjs';
 import { EducationalLevel } from '../model/educational-level';
 import { showAlertError } from '../tools/message-functions';
@@ -223,6 +223,31 @@ export class DatabaseService {
     } catch (error) {
       showAlertError('DataBaseService.deleteByUserName', error);
       return false;
+    }
+  }
+
+  async updateUser(user: User): Promise<boolean> {
+    try{
+      const q = this.sqlInsertUpdate
+      const result: capSQLiteChanges = await this.db.run(q, [
+        user.email, 
+        user.password, 
+        user.secretQuestion, 
+        user.secretAnswer, 
+        user.firstName, 
+        user.lastName, 
+        user.educationalLevel.id, 
+        convertDateToString(user.dateOfBirth), 
+        user.address, 
+        user.image, 
+        user.userName
+      ]);
+      const rowsAffected = result.changes?.changes ?? 0;
+      await this.readUsers();
+      return rowsAffected > 0;
+    } catch (error) {
+      showAlertError('DataBaseService.updateUser', error);
+      throw error;
     }
   }
 
