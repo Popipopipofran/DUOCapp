@@ -11,6 +11,8 @@ import { IonFabButton, IonFab, IonList, IonCardContent, IonHeader
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-miclase',
@@ -22,7 +24,7 @@ import { AuthService } from 'src/app/services/auth.service';
     , IonLabel, IonInput, IonTextarea, IonGrid, IonRow, IonCol
     , IonButton, IonIcon, IonContent, IonCardContent
     , IonFab, IonFabButton, IonFabList
-    , CommonModule, FormsModule]
+    , CommonModule, FormsModule,TranslateModule]
 })
 export class MiclaseComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;

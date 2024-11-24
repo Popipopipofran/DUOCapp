@@ -7,13 +7,15 @@ import { LoadingController } from '@ionic/angular';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-correo',
   templateUrl: './correo.page.html',
   styleUrls: ['./correo.page.scss'],
   standalone: true,
-  imports: [IonicModule, FormsModule, HeaderComponent]
+  imports: [IonicModule, FormsModule, HeaderComponent,TranslateModule]
 })
 export class CorreoPage implements AfterViewInit {
 

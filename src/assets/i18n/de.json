@@ -93,6 +93,31 @@
   "Post": {
   "Prefix": "(Beitrag #{{ number }})"
   }
-}
+},
+"ClassDetails": {
+  "Campus": "Campus",
+  "SubjectID": "Fach-ID",
+  "Section": "Sektion",
+  "SubjectName": "Fachname",
+  "ProfessorName": "Name des Professors",
+  "Day": "Tag",
+  "StartBlock": "Startblock",
+  "EndBlock": "Endblock",
+  "StartTime": "Startzeit",
+  "EndTime": "Endzeit",
+  "ScanQRCodePrompt": "Sie müssen einen QR-Code für Ihre Klasse scannen"
+},
+"ForgotPassword": {
+    "Title": "Passwort vergessen",
+    "Step1": "Schritt 1: Geben Sie Ihre E-Mail-Adresse ein",
+    "EnterEmail": "Geben Sie Ihre E-Mail-Adresse ein",
+    "Placeholder": {
+      "Email": "Z.B.: beispiel@duocuc.cl"
+    },
+    "Button": {
+      "Recover": "Passwort wiederherstellen"
+    },
+    "BackToLogin": "Zurück zur Anmeldung"
+  }
 
 }

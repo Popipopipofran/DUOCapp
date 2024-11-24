@@ -93,6 +93,30 @@
     "Post": {
     "Prefix": "(Post #{{ number }})"
     }
-
+  },
+  "ClassDetails": {
+  "Campus": "Campus",
+  "SubjectID": "Subject ID",
+  "Section": "Section",
+  "SubjectName": "Subject Name",
+  "ProfessorName": "Professor's Name",
+  "Day": "Day",
+  "StartBlock": "Start Block",
+  "EndBlock": "End Block",
+  "StartTime": "Start Time",
+  "EndTime": "End Time",
+  "ScanQRCodePrompt": "You must scan a QR code for your class"
+},
+"ForgotPassword": {
+    "Title": "Forgot my password",
+    "Step1": "Step 1: enter your email",
+    "EnterEmail": "Enter your email",
+    "Placeholder": {
+      "Email": "Eg: example@duocuc.cl"
+    },
+    "Button": {
+      "Recover": "Recover password"
+    },
+    "BackToLogin": "Back to login"
   }
 }

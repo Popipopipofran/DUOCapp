@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { ToastController } from '@ionic/angular';
 import { NivelEducacional } from  'src/app/model/nivel-educacional'
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-misdatos',
