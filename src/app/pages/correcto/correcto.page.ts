@@ -3,13 +3,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
 import { IonicModule } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-correcto',
   templateUrl: './correcto.page.html',
   styleUrls: ['./correcto.page.scss'],
   standalone: true,
-  imports: [IonicModule]
+  imports: [IonicModule, TranslateModule]
 })
 export class CorrectoPage implements OnInit, AfterViewInit {
   public mensaje: string = '';

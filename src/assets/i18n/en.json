@@ -118,5 +118,23 @@
       "Recover": "Recover password"
     },
     "BackToLogin": "Back to login"
+  },
+  "ForgotPassword2": {
+    "TitleStep2": "Forgot my password",
+    "Step2": "Step 2: Answer the secret question",
+    "EnterAnswer": "Enter your answer",
+    "Placeholder": {
+      "Answer": "Secret answer"
+    },
+    "Button": {
+      "ValidateAnswer": "Validate answer"
+    },
+    "Login": "Login"
+  },
+  "ErrorMessages": {
+    "InvalidData": "Sorry, but the data entered is not correct!"
+  },
+  "Correct": {
+    "CorrectData": "Your password is "
   }
 }

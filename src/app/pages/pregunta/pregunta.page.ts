@@ -6,6 +6,8 @@ import { AuthService } from 'src/app/services/auth.service';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { AnimationController, LoadingController, ToastController } from '@ionic/angular';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 
 
 @Component({
@@ -13,7 +15,7 @@ import { AnimationController, LoadingController, ToastController } from '@ionic/
   templateUrl: './pregunta.page.html',
   styleUrls: ['./pregunta.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule,TranslateModule]
 })
 export class PreguntaPage implements OnInit {
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
@@ -28,6 +30,7 @@ export class PreguntaPage implements OnInit {
     private animationController: AnimationController,
     private toastController: ToastController,
     private authService: AuthService,
+    private translate: TranslateService
   ) {
     this.activatedRoute.queryParams.subscribe(params => {
       const navigation = this.router.getCurrentNavigation();
@@ -79,7 +82,7 @@ export class PreguntaPage implements OnInit {
       // esta es la pagina COOORRECCCTOOOOO 
       const navigationExtras: NavigationExtras = {
         state: {
-          mensaje: 'Tu contraseña es ' + this.usuario.password,
+          mensaje: this.translate.instant('Correct.CorrectData') + this.usuario.password,
         },
       };
       this.router.navigate(['/correcto'], navigationExtras);
@@ -97,7 +100,7 @@ export class PreguntaPage implements OnInit {
       // esto es la pagina incorreccctooo y se supone que muestra el mensaje d error
       const navigationExtras: NavigationExtras = {
         state: {
-          mensaje: '¡Lo sentimos, pero los datos ingresados no son correctos!',
+          mensaje: this.translate.instant('ErrorMessages.InvalidData'),
         },
       };
       this.router.navigate(['/incorrecto'], navigationExtras);

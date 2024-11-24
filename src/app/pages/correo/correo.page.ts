@@ -7,7 +7,7 @@ import { LoadingController } from '@ionic/angular';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -30,6 +30,8 @@ export class CorreoPage implements AfterViewInit {
     private animationController: AnimationController,
     private toastController: ToastController,
     private authService: AuthService,
+    private translate: TranslateService
+
   ) {
   }
 
@@ -79,7 +81,7 @@ export class CorreoPage implements AfterViewInit {
 
         const navigationExtras: NavigationExtras = {
           state: {
-            mensaje: '¡Lo sentimos, pero los datos ingresados no son correctos!',
+            mensaje: this.translate.instant('ErrorMessages.InvalidData'),
           },
         };
         this.router.navigate(['/incorrecto'], navigationExtras);

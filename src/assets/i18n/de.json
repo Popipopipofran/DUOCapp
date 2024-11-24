@@ -118,6 +118,24 @@
       "Recover": "Passwort wiederherstellen"
     },
     "BackToLogin": "Zurück zur Anmeldung"
-  }
+  },
 
+  "ForgotPassword2": {
+    "TitleStep2": "Passwort vergessen",
+    "Step2": "Schritt 2: Beantworten Sie die Sicherheitsfrage",
+    "EnterAnswer": "Geben Sie Ihre Antwort ein",
+    "Placeholder": {
+      "Answer": "Geheime Antwort"
+    },
+    "Button": {
+      "ValidateAnswer": "Antwort überprüfen"
+    },
+    "Login": "Anmelden"
+  },
+  "ErrorMessages": {
+    "InvalidData": "Entschuldigung, aber die eingegebenen Daten sind nicht korrekt!"
+  },
+  "Correct": {
+    "CorrectData": "Dein Passwort ist "
+  }
 }

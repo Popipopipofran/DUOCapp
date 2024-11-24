@@ -116,5 +116,23 @@
       "Recover": "Recuperar contraseña"
     },
     "BackToLogin": "Volver al inicio de sesión"
+  },
+  "ForgotPassword2": {
+    "TitleStep2": "Olvidé mi contraseña",
+    "Step2": "Paso 2: Responde la pregunta secreta",
+    "EnterAnswer": "Ingresa tu respuesta",
+    "Placeholder": {
+      "Answer": "Respuesta secreta"
+    },
+    "Button": {
+      "ValidateAnswer": "Validar respuesta"
+    },
+    "Login": "Iniciar Sesión"
+  },
+  "ErrorMessages": {
+    "InvalidData": "¡Lo sentimos, pero los datos ingresados no son correctos!"
+  },
+  "Correct":{
+    "CorrectData": "Tu Contraseña Es "
   }
 }
