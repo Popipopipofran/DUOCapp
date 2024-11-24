@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 export class NivelEducacional {
   public id: number;
   public nombre: string;

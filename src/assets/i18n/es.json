@@ -134,5 +134,20 @@
   },
   "Correct":{
     "CorrectData": "Tu Contraseña Es "
+  },
+  "misDatos": {
+     "Title": "Mis Datos",
+    "CardTitle": "Información de Usuario",
+    "FirstName": "Nombre",
+    "LastName": "Apellido",
+    "Email": "Correo",
+    "Address": "Dirección",
+    "SecretQuestion": "Pregunta Secreta",
+    "SecretAnswer": "Respuesta Secreta",
+    "EducationLevel": "Educación",
+    "Password": "Contraseña",
+    "RepeatPassword": "Repetir Contraseña",
+    "BirthDate": "Fecha de Nacimiento",
+    "ButtonUpdate": "Actualizar"
   }
 }

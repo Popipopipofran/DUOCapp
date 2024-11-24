@@ -17,7 +17,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './misdatos.component.html',
   styleUrls: ['./misdatos.component.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule, TranslateModule]
 })
 export class MisdatosComponent implements OnInit, AfterViewInit {
   user: User = new User();
@@ -71,10 +71,6 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
     this.user.lastName = event;
   }
 
-  cambiarCorreo(event: any) {
-    this.user.email = event;
-  }
-
   limpiarFormulario() {
     this.user = new User();
   }
@@ -108,6 +104,7 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
   async actualizarDatos(): Promise<void> {
     if(this.password1 !== '' && this.password1 === this.password2) {
       try {
+        this.user.educationalLevel = NivelEducacional.getNivelEducacionalById(this.idNivelEducacional) as NivelEducacional;
         await this.userService.actualizarUsuario(this.user);
         this.mostrarToast('Datos actualizados correctamente.');
       } catch (error) {

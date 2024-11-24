@@ -137,5 +137,20 @@
   },
   "Correct": {
     "CorrectData": "Dein Passwort ist "
+  },
+  "misDatos": {
+     "Title": "Meine Daten",
+    "CardTitle": "Benutzerinformationen",
+    "FirstName": "Vorname",
+    "LastName": "Nachname",
+    "Email": "E-Mail",
+    "Address": "Adresse",
+    "SecretQuestion": "Geheime Frage",
+    "SecretAnswer": "Geheime Antwort",
+    "EducationLevel": "Bildung",
+    "Password": "Passwort",
+    "RepeatPassword": "Passwort wiederholen",
+    "BirthDate": "Geburtsdatum",
+    "ButtonUpdate": "Aktualisieren"
   }
 }
