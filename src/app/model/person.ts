@@ -1,10 +1,10 @@
-import { EducationalLevel } from './educational-level';
+import { NivelEducacional } from './nivel-educacional';
 
 export class Person {
 
   firstName = '';
   lastName = '';
-  educationalLevel: EducationalLevel = EducationalLevel.findLevel(1)!;
+  educationalLevel: NivelEducacional = NivelEducacional.getNivelEducacionalById(1)!;
   dateOfBirth: Date = new Date();
   address = '';
 

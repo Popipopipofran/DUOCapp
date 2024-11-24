@@ -11,6 +11,7 @@ import { Clase } from 'src/app/model/clase';
 import { Router } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
 import { ScannerService } from 'src/app/services/scanner.service';
+import { DatabaseService } from 'src/app/services/database.service';
 import { WelcomeComponent } from 'src/app/components/welcome/welcome.component';
 import { ForumComponent } from 'src/app/components/forum/forum.component';
 import { MiclaseComponent } from 'src/app/components/miclase/miclase.component';
@@ -30,11 +31,12 @@ import { MisdatosComponent } from 'src/app/components/misdatos/misdatos.componen
   ]
 })
 export class HomePage {
+  public users: any[] = [];
   
   @ViewChild(FooterComponent) footer!: FooterComponent;
   selectedComponent = 'welcome';
 
-  constructor(private auth: AuthService, private scanner: ScannerService) { }
+  constructor(private auth: AuthService, private scanner: ScannerService) {}
 
   ionViewWillEnter() {
     this.changeComponent('welcome');

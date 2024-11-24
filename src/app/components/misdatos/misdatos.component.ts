@@ -19,7 +19,9 @@ import { NivelEducacional } from  'src/app/model/nivel-educacional'
 })
 export class MisdatosComponent implements OnInit, AfterViewInit {
   user: User = new User();
-
+  public showCalendar: boolean = false
+  public idNivelEducacional: number | undefined = undefined;
+  public nivelesEducacionales = NivelEducacional.getNivelesEducacionales();
   public password1: string = '';
   public password2: string = '';
 
@@ -41,6 +43,7 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
     this.auth.authUser.subscribe((user) => {
       if (user) {
         this.user = user;
+        this.idNivelEducacional = user.educationalLevel.id;
       }
     });
   }
@@ -74,6 +77,18 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
     this.user = new User();
   }
 
+  public cambiarNivelEducacional(event: any): void {
+    this.idNivelEducacional = event.detail.value;
+    const nivelEducacional = NivelEducacional.getNivelEducacionalById(this.idNivelEducacional);
+    if (nivelEducacional instanceof NivelEducacional) {
+      this.user.educationalLevel = nivelEducacional;
+    }
+  }
+
+  toggleCalendar() {
+    this.showCalendar = !this.showCalendar;
+  }
+
   mostrarDatosUsuario() {
     console.log('Datos del usuario cargados:', this.user);
   }
@@ -89,11 +104,9 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
   }
 
   async actualizarDatos(): Promise<void> {
-    console.log(this.password1, this.password2);
-    console.log(this.password1 !== '', this.password1 === this.password2)
     if(this.password1 !== '' && this.password1 === this.password2) {
       try {
-        const actualizado = await this.userService.actualizarUsuario(this.user);
+        await this.userService.actualizarUsuario(this.user);
         this.mostrarToast('Datos actualizados correctamente.');
       } catch (error) {
         console.log(error);

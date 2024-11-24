@@ -1,4 +1,4 @@
-  import { EducationalLevel } from './educational-level';
+  import { NivelEducacional } from './nivel-educacional';
   import { Person } from "./person";
   import { DatabaseService } from '../services/database.service';
   import { inject } from '@angular/core';
@@ -52,7 +52,7 @@
       secretAnswer: string,
       firstName: string,
       lastName: string,
-      educationalLevel: EducationalLevel,
+      educationalLevel: NivelEducacional,
       dateOfBirth: Date,
       address: string,
       image: string
@@ -101,7 +101,7 @@
           secretAnswer: ${this.secretAnswer}\n
           First name: ${this.firstName}\n
           Last name: ${this.lastName}\n
-          Education level: ${this.educationalLevel.getEducation()}\n
+          Education level: ${this.educationalLevel.getTextoNivelEducacional()}\n
           Date of birth: ${convertDateToString(this.dateOfBirth)}\n
           Address: ${this.address}\n
           Image: ${this.image !== ''}\n

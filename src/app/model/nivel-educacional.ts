@@ -14,6 +14,10 @@ export class NivelEducacional {
     return nived;
   }
 
+  public static getNivelEducacionalById(id: number | undefined): NivelEducacional | undefined {
+    return NivelEducacional.getNivelesEducacionales().find(n => n.id === id);
+  }
+
   public static getNivelesEducacionales(): NivelEducacional[] {
     const nivelesEducacionales = [];
     nivelesEducacionales.push(NivelEducacional.getNivelEducacional(1, 'Básica Incompleta'));

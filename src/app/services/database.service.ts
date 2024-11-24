@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { SQLiteService } from './sqlite.service';
 import { User } from '../model/user';
 import { BehaviorSubject } from 'rxjs';
-import { EducationalLevel } from '../model/educational-level';
+import { NivelEducacional } from '../model/nivel-educacional';
 import { showAlertError } from '../tools/message-functions';
 import { convertDateToString, convertStringToDate } from '../tools/date-functions';
 
@@ -20,7 +20,7 @@ export class DatabaseService {
     'gato',
     'Ana', 
     'Torres', 
-    EducationalLevel.findLevel(6)!,
+    NivelEducacional.getNivelEducacionalById(6)!,
     new Date(2000, 0, 5),
     'La Florida',
     'default-image.jpg');
@@ -33,7 +33,7 @@ export class DatabaseService {
     'panqueques',
     'Juan', 
     'Pérez',
-    EducationalLevel.findLevel(5)!,
+    NivelEducacional.getNivelEducacionalById(5)!,
     new Date(2000, 1, 10),
     'La Pintana',
     'default-image.jpg');
@@ -46,7 +46,7 @@ export class DatabaseService {
     'moto',
     'Carla', 
     'Mujica', 
-    EducationalLevel.findLevel(6)!,
+    NivelEducacional.getNivelEducacionalById(6)!,
     new Date(2000, 2, 20),
     'Providencia',
     'default-image.jpg');
@@ -185,6 +185,7 @@ export class DatabaseService {
     try {
       const q = 'SELECT * FROM USER;';
       const rows = (await this.db.query(q)).values;
+      console.log('rows:', rows)
       let users: User[] = [];
       if (rows) {
         users = rows.map((row: any) => this.rowToUser(row));
@@ -230,6 +231,7 @@ export class DatabaseService {
     try{
       const q = this.sqlInsertUpdate
       const result: capSQLiteChanges = await this.db.run(q, [
+        user.userName,
         user.email, 
         user.password, 
         user.secretQuestion, 
@@ -237,10 +239,9 @@ export class DatabaseService {
         user.firstName, 
         user.lastName, 
         user.educationalLevel.id, 
-        convertDateToString(user.dateOfBirth), 
+        convertDateToString(new Date(user.dateOfBirth)), 
         user.address, 
-        user.image, 
-        user.userName
+        user.image
       ]);
       const rowsAffected = result.changes?.changes ?? 0;
       await this.readUsers();
@@ -298,7 +299,7 @@ export class DatabaseService {
       user.secretAnswer = row.secretAnswer;
       user.firstName = row.firstName;
       user.lastName = row.lastName;
-      user.educationalLevel = EducationalLevel.findLevel(row.educationalLevel) || new EducationalLevel();
+      user.educationalLevel = NivelEducacional.getNivelEducacionalById(row.educationalLevel) || new NivelEducacional();
       user.dateOfBirth = convertStringToDate(row.dateOfBirth);
       user.address = row.address;
       return user;

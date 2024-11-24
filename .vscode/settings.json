@@ -7,8 +7,8 @@
   "java.configuration.updateBuildConfiguration": "interactive",
   "android-webview-debug.adbPath": "/home/cgomezvega/Android/Sdk/platform-tools/adb",
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "files.autoSave": "afterDelay", 
-  "editor.tabSize": 2, 
-  "editor.mouseWheelZoom": true, 
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 2,
+  "editor.mouseWheelZoom": true,
   "editor.minimap.enabled": false
 }
