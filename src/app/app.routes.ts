@@ -38,6 +38,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/correcto/correcto.page').then( m => m.CorrectoPage)
   },
   {
+    path: 'registro',
+    loadComponent: () => import('./pages/registro/registro.page').then( m => m.RegistroPage)
+  },
+  {
     path: 'incorrecto',
     loadComponent: () => import('./pages/incorrecto/incorrecto.page').then( m => m.IncorrectoPage)
   }

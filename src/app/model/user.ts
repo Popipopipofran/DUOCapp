@@ -18,30 +18,20 @@
       super();
     }
 
-    setUser ({
-      userName,
-      email,
-      password,
-      secretQuestion,
-      secretAnswer,
-      firstName,
-      lastName,
-      educationalLevel,
-      dateOfBirth,
-      address,
-      image
-    }: User) {
-      this.userName = userName
-      this.email = email
-      this.password = password
-      this.secretQuestion = secretQuestion
-      this.secretAnswer = secretAnswer
-      this.firstName = firstName
-      this.lastName = lastName
-      this.educationalLevel = educationalLevel
-      this.dateOfBirth = dateOfBirth
-      this.address = address
-      this.image = image
+    public static emptyUser () {
+      const user = new User();
+      user.userName = '';
+      user.email = '';
+      user.password = '';
+      user.secretQuestion = '';
+      user.secretAnswer = '';
+      user.firstName = '';
+      user.lastName = '';
+      user.educationalLevel = NivelEducacional.getNivelEducacionalById(1)!;
+      user.dateOfBirth = new Date();
+      user.address = '';
+      user.image = '';
+      return user;
     }
 
     static getNewUsuario(

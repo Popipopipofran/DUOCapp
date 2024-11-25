@@ -73,6 +73,11 @@ export class LoginPage implements ViewWillEnter {
     this.router.navigate(['/correo']);
   }
 
+  register() {
+    console.log('Navegando a la página de registro');
+    this.router.navigate(['/registro']);
+  }
+
   showMap() {
     this.router.navigate(['/map']);
   }
