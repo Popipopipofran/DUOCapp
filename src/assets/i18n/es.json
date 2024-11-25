@@ -118,5 +118,38 @@
       "Recover": "Recuperar contraseña"
     },
     "BackToLogin": "Volver al inicio de sesión"
+  },
+  "ForgotPassword2": {
+    "TitleStep2": "Olvidé mi contraseña",
+    "Step2": "Paso 2: Responde la pregunta secreta",
+    "EnterAnswer": "Ingresa tu respuesta",
+    "Placeholder": {
+      "Answer": "Respuesta secreta"
+    },
+    "Button": {
+      "ValidateAnswer": "Validar respuesta"
+    },
+    "Login": "Iniciar Sesión"
+  },
+  "ErrorMessages": {
+    "InvalidData": "¡Lo sentimos, pero los datos ingresados no son correctos!"
+  },
+  "Correct":{
+    "CorrectData": "Tu Contraseña Es "
+  },
+  "misDatos": {
+     "Title": "Mis Datos",
+    "CardTitle": "Información de Usuario",
+    "FirstName": "Nombre",
+    "LastName": "Apellido",
+    "Email": "Correo",
+    "Address": "Dirección",
+    "SecretQuestion": "Pregunta Secreta",
+    "SecretAnswer": "Respuesta Secreta",
+    "EducationLevel": "Educación",
+    "Password": "Contraseña",
+    "RepeatPassword": "Repetir Contraseña",
+    "BirthDate": "Fecha de Nacimiento",
+    "ButtonUpdate": "Actualizar"
   }
 }

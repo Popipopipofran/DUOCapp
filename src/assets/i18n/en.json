@@ -118,5 +118,38 @@
       "Recover": "Recover password"
     },
     "BackToLogin": "Back to login"
+  },
+  "ForgotPassword2": {
+    "TitleStep2": "Forgot my password",
+    "Step2": "Step 2: Answer the secret question",
+    "EnterAnswer": "Enter your answer",
+    "Placeholder": {
+      "Answer": "Secret answer"
+    },
+    "Button": {
+      "ValidateAnswer": "Validate answer"
+    },
+    "Login": "Login"
+  },
+  "ErrorMessages": {
+    "InvalidData": "Sorry, but the data entered is not correct!"
+  },
+  "Correct": {
+    "CorrectData": "Your password is "
+  },
+  "misDatos": {
+     "Title": "My Data",
+    "CardTitle": "User Information",
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "Email": "Email",
+    "Address": "Address",
+    "SecretQuestion": "Secret Question",
+    "SecretAnswer": "Secret Answer",
+    "EducationLevel": "Education",
+    "Password": "Password",
+    "RepeatPassword": "Repeat Password",
+    "BirthDate": "Date of Birth",
+    "ButtonUpdate": "Update"
   }
 }
