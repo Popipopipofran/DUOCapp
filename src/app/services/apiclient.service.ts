@@ -19,7 +19,7 @@ export class APIClientService {
     })
   };
 
-  apiUrl = 'http://localhost:4200';
+  apiUrl = 'http://duocapp.aptenia.cl';
   // apiUrl = 'http://192.168.217.131:3000';
   postList: BehaviorSubject<Post[]> = new BehaviorSubject<Post[]>([]);
 
