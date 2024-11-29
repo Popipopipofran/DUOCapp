@@ -12,12 +12,17 @@
 }
 
 h6 {
-  color: darkgreen;
+  font-family: 'Roboto', sans-serif; /* Cambia por tu tipografía preferida */
+  font-size: 20px; /* Aumenta el tamaño */
+  color: #FFFFFF; /* Gris claro */
+  font-weight: 500; /* Ajusta el grosor */
 }
 
 h4 {
-  color: darkblue;
-  font-weight: bold;
+  font-family: 'Lora', serif; /* Cambia por tu tipografía preferida */
+  font-size: 26px; /* Tamaño más grande */
+  color: #D3D3D3; /* Blanco */
+  font-weight: bold; /* Texto en negrita */
 }
 
 .sin-bordes {

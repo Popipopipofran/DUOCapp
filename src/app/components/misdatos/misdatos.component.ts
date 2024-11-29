@@ -101,6 +101,35 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
 
   async actualizarDatos(): Promise<void> {
     if(this.password1 !== '' && this.password1 === this.password2) {
+      const fields = [
+        'userName',
+        'email',
+        'password',
+        'secretQuestion',
+        'secretAnswer',
+        'firstName',
+        'lastName',
+        'educationalLevel',
+        'dateOfBirth',
+        'address'
+      ]
+      let fail = false;
+      fields.forEach((field) => {
+        if ((this.user as any)[field] === '') {
+          this.mostrarToast('Todos los campos son obligatorios.', 'danger');
+          fail = true;
+          return;
+        }
+      });
+      function validateEmail(email: string): boolean {
+        const re = /\S+@\S+\.\S+/;
+        return re.test(email);
+      }
+      if (!validateEmail(this.user.email)) {
+        this.mostrarToast('El email no es válido.', 'danger');
+        fail = true;
+      }
+      if (fail) return;
       try {
         this.user.educationalLevel = NivelEducacional.getNivelEducacionalById(this.idNivelEducacional) as NivelEducacional;
         await this.userService.actualizarUsuario(this.user);

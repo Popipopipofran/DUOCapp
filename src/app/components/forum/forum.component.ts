@@ -6,7 +6,7 @@ import { IonFabButton, IonFab, IonList, IonCardContent, IonHeader
   , IonCardSubtitle, IonItem, IonLabel, IonInput, IonTextarea
   , IonGrid, IonRow, IonCol, IonButton, IonIcon, IonContent
   , IonFabList } from '@ionic/angular/standalone';
-import { pencilOutline, trashOutline, add } from 'ionicons/icons';
+import { hammerOutline, trashBinOutline, add } from 'ionicons/icons';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Post } from 'src/app/model/post';
@@ -40,7 +40,7 @@ export class ForumComponent implements OnInit, OnDestroy {
   private userSubscription!: Subscription;
 
   constructor(private api: APIClientService, private auth: AuthService) {
-    addIcons({ pencilOutline, trashOutline, add });
+    addIcons({ hammerOutline, trashBinOutline, add });
   }
 
   ngOnInit() {
