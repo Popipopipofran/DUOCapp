@@ -23,8 +23,12 @@
   </app-forum>
 
   <app-misdatos 
-  *ngIf="selectedComponent === 'datos'">
-</app-misdatos>
+    *ngIf="selectedComponent === 'datos'">
+  </app-misdatos>
+
+  <app-users 
+    *ngIf="selectedComponent === 'users'">
+  </app-users>
 
 </ion-content>
 

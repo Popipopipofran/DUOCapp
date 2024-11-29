@@ -1,3 +1,5 @@
+import { User } from 'src/app/model/user';
+import { AuthService } from 'src/app/services/auth.service';
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -19,12 +21,18 @@ import { desktopOutline, homeOutline, pawOutline, pencilOutline, personOutline, 
   ]
 })
 export class FooterComponent {
-
+  user: User = new User();
   selectedButton = 'welcome';
   @Output() footerClick = new EventEmitter<string>();
 
-  constructor() { 
+  constructor(private auth: AuthService,) { 
     addIcons({ homeOutline, qrCodeOutline, pawOutline, pencilOutline, desktopOutline, personOutline });
+    this.auth.authUser.subscribe((user) => {
+      console.log('User:', user);
+      if (user) {
+        this.user = user;
+      }
+    });
   }
 
   sendClickEvent($event: any) {

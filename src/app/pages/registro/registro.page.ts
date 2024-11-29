@@ -110,9 +110,8 @@ export class RegistroPage implements ViewWillEnter {
         new Date(this.user.dateOfBirth),
         this.user.address,
         '',
+        'user'
       );
-      console.log('Usuario a', user);
-      console.log('Usuario b', this.user);
       const user1 = await this.db.readUser(user.userName);
       if (!user1) {
         await this.db.saveUser(user);

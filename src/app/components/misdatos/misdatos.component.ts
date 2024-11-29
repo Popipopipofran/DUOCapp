@@ -31,9 +31,7 @@ export class MisdatosComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     console.log(this.user.educationalLevel);
-   }
-
-  
+  }
 
   constructor(
     private userService: UserService,

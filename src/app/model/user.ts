@@ -13,6 +13,7 @@
     secretAnswer = '';
     //db = inject(DataBaseService);
     image = '';
+    role = '';
 
     constructor() {
       super();
@@ -31,6 +32,7 @@
       user.dateOfBirth = new Date();
       user.address = '';
       user.image = '';
+      user.role = '';
       return user;
     }
 
@@ -45,7 +47,8 @@
       educationalLevel: NivelEducacional,
       dateOfBirth: Date,
       address: string,
-      image: string
+      image: string,
+      role: string
     ) {
       let usuario = new User();
       usuario.userName = userName;
@@ -59,6 +62,7 @@
       usuario.dateOfBirth = dateOfBirth;
       usuario.address = address;
       usuario.image = image;
+      usuario.role = role;
       return usuario;
     }
 
@@ -95,6 +99,7 @@
           Date of birth: ${convertDateToString(this.dateOfBirth)}\n
           Address: ${this.address}\n
           Image: ${this.image !== ''}\n
+          Role: ${this.role}\n
         `;
     }
 

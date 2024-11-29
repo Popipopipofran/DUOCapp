@@ -16,6 +16,7 @@ import { WelcomeComponent } from 'src/app/components/welcome/welcome.component';
 import { ForumComponent } from 'src/app/components/forum/forum.component';
 import { MiclaseComponent } from 'src/app/components/miclase/miclase.component';
 import { MisdatosComponent } from 'src/app/components/misdatos/misdatos.component';
+import { UsersComponent } from 'src/app/components/users/users.component';
 
 
 @Component({
@@ -27,7 +28,7 @@ import { MisdatosComponent } from 'src/app/components/misdatos/misdatos.componen
       CommonModule, FormsModule, TranslateModule, IonContent
     , HeaderComponent, FooterComponent
     , WelcomeComponent, QrWebScannerComponent
-    , ForumComponent, MiclaseComponent, MisdatosComponent
+    , ForumComponent, MiclaseComponent, MisdatosComponent, UsersComponent
   ]
 })
 export class HomePage {

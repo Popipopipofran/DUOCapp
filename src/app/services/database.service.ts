@@ -23,7 +23,8 @@ export class DatabaseService {
     NivelEducacional.getNivelEducacionalById(6)!,
     new Date(2000, 0, 5),
     'La Florida',
-    'default-image.jpg');
+    'default-image.jpg',
+    'user');
 
   testUser2 = User.getNewUsuario(
     'jperez', 
@@ -36,7 +37,8 @@ export class DatabaseService {
     NivelEducacional.getNivelEducacionalById(5)!,
     new Date(2000, 1, 10),
     'La Pintana',
-    'default-image.jpg');
+    'default-image.jpg',
+    'user');
 
   testUser3 = User.getNewUsuario(
     'cmujica', 
@@ -49,7 +51,21 @@ export class DatabaseService {
     NivelEducacional.getNivelEducacionalById(6)!,
     new Date(2000, 2, 20),
     'Providencia',
-    'default-image.jpg');
+    'default-image.jpg',
+    'user');
+  testUser4 = User.getNewUsuario(
+    'admin', 
+    'admin@duocuc.cl', 
+    'admin', 
+    '¿Cuál es tu vehículo favorito?',
+    'moto',
+    'admin', 
+    'user', 
+    NivelEducacional.getNivelEducacionalById(6)!,
+    new Date(2000, 2, 20),
+    'Providencia',
+    'default-image.jpg',
+    'admin');
 
   userUpgrades = [
     {
@@ -66,7 +82,8 @@ export class DatabaseService {
         educationalLevel INTEGER NOT NULL,
         dateOfBirth      TEXT NOT NULL,
         address          TEXT NOT NULL,
-        image            TEXT NOT NULL
+        image            TEXT NOT NULL,
+        role             TEXT NOT NULL
       );
       `]
     }
@@ -84,11 +101,12 @@ export class DatabaseService {
       educationalLevel, 
       dateOfBirth,
       address,
-      image
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+      image,
+      role
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
   `;
 
-  dataBaseName = 'DinosaurDataBase-sssss';
+  dataBaseName = 'DinosaurDataBase-sssssssss';
   db!: SQLiteDBConnection;
   userList: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
 
@@ -124,6 +142,12 @@ export class DatabaseService {
       if (!user3) {
         await this.saveUser(this.testUser3);
       }
+
+      // Verifica y guarda al usuario 'admin' si no existe
+      const user4 = await this.readUser(this.testUser4.userName);
+      if (!user4) {
+        await this.saveUser(this.testUser4);
+      }
   
     } catch (error) {
       showAlertError('DataBaseService.createTestUsers', error);
@@ -152,8 +176,9 @@ export class DatabaseService {
           educationalLevel, 
           dateOfBirth,
           address,
-          image
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          image,
+          role
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
       `;
       await this.db.run(this.sqlInsertUpdate, [
           user.userName, 
@@ -166,7 +191,8 @@ export class DatabaseService {
           user.educationalLevel.id, 
           convertDateToString(user.dateOfBirth), 
           user.address,
-          user.image
+          user.image,
+          user.role
       ]);
       await this.readUsers();
     } catch (error) {
@@ -241,7 +267,8 @@ export class DatabaseService {
         user.educationalLevel.id, 
         convertDateToString(new Date(user.dateOfBirth)), 
         user.address, 
-        user.image
+        user.image,
+        user.role
       ]);
       const rowsAffected = result.changes?.changes ?? 0;
       await this.readUsers();
@@ -255,7 +282,7 @@ export class DatabaseService {
   // Validar usuario
   async findUser(userName: string, password: string): Promise<User | undefined> {
     try {
-      const q = 'SELECT * FROM USER WHERE userName=? AND password=?;';
+      const q = 'SELECT * FROM USER WHERE userName=? OR email=? AND password=?;';
       const rows = (await this.db.query(q, [userName, password])).values;
       return rows?.length ? this.rowToUser(rows[0]) : undefined;
     } catch (error) {
@@ -277,9 +304,11 @@ export class DatabaseService {
 
   async findUserByEmail(email: string): Promise<User | undefined> {
     try {
+      console.log('email:', email);
       const q = 'SELECT * FROM USER WHERE email=?;';
       const rows = (await this.db.query(q, [email])).values;   
       if (rows?.length){
+        console.log('rows:', rows)
         return rows? this.rowToUser(rows[0]) : undefined;
       }
       return undefined;
@@ -302,6 +331,7 @@ export class DatabaseService {
       user.educationalLevel = NivelEducacional.getNivelEducacionalById(row.educationalLevel) || new NivelEducacional();
       user.dateOfBirth = convertStringToDate(row.dateOfBirth);
       user.address = row.address;
+      user.role = row.role;
       return user;
     } catch (error) {
       showAlertError('DataBaseService.rowToUser', error);
