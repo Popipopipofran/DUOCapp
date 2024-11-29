@@ -17,7 +17,7 @@ describe('Prueba de Validaciones en MisdatosComponent', () => {
     cy.get('ion-segment-button#misdatos').click();
   });
   afterEach(() => {
-    cy.wait(1000);
+    cy.wait(100);
     cy.get('ion-button#logout-button').click();
   });
 
