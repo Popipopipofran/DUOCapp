@@ -33,6 +33,7 @@ export class HeaderComponent {
   }
 
   logout() {
+    window.localStorage.clear();
     this.authService.logout();
   }
 

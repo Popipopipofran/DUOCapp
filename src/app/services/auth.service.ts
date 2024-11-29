@@ -63,6 +63,7 @@ export class AuthService {
 
   async saveAuthUser(user: User): Promise<User | null> {
     try {
+      window.localStorage.setItem('AUTHENTICATED_USER', JSON.stringify(user));
       await this.storage.set(this.storageAuthUserKey, user);
       this.authUser.next(user);
       return user;
@@ -88,6 +89,7 @@ export class AuthService {
       const authUser = await this.storage.get(this.storageAuthUserKey);
       // verifica si el usuario esta conectado
       if (authUser) {
+        window.localStorage.setItem('isFirstLogin', 'false');
         this.authUser.next(authUser);
         this.isFirstLogin.next(false);
         await this.router.navigate(['/home']);
