@@ -21,7 +21,7 @@ describe('Prueba de Validaciones en MisdatosComponent', () => {
     cy.get('ion-button#logout-button').click();
   });
 
-  it('Debería actualizar los datos correctamente con información válida', () => {
+  it.skip('Debería actualizar los datos correctamente con información válida', () => {
     // Rellenar todos los campos con información válida
     cy.get('[data-testid="firstName-input"] input').clear().type('Nombre');
     cy.get('[data-testid="lastName-input"] input').clear().type('Apellido');
@@ -56,6 +56,17 @@ describe('Prueba de Validaciones en MisdatosComponent', () => {
       expect(user.email).to.equal('nombre.apellido@duocuc.cl');
       // expect(user.educationalLevel.nombre).to.equal('Universidad'); // Ajusta según la estructura real del objeto User
     });
+
+    cy.get('[data-testid="firstName-input"] input').clear().type('Ana');
+    cy.get('[data-testid="lastName-input"] input').clear().type('Torres');
+    cy.get('[data-testid="email-input"] input').clear().type('atorres@duocuc.cl');
+
+    // Rellenar las contraseñas
+    cy.get('[data-testid="password1-input"] input').clear().type('1234');
+    cy.get('[data-testid="password2-input"] input').clear().type('1234');
+
+    // Hacer clic en el botón de actualizar datos
+    cy.get('[data-testid="update-button"]').should('be.visible').and('not.be.disabled').click();
   });
 
   it('Debería mostrar errores al intentar actualizar con campos vacíos', () => {

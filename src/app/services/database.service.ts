@@ -106,7 +106,7 @@ export class DatabaseService {
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
   `;
 
-  dataBaseName = 'DinosaurDataBase-sssssssss';
+  dataBaseName = 'DuocApp';
   db!: SQLiteDBConnection;
   userList: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([]);
 
