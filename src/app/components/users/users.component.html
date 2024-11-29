@@ -18,9 +18,11 @@
         <p>Correo: {{ user.email }}</p>
       </ion-card-content>
 
-      <ion-button expand="block" fill="outline" color="danger" (click)="deleteUser(user.userName)">
+      <ion-button *ngIf="user.role === 'user'" expand="block" fill="outline" color="danger" (click)="deleteUser(user.userName)">
         Eliminar
       </ion-button>
     </ion-card>
   </ion-list>
+  <br>
+  <br>
 </ion-content>
