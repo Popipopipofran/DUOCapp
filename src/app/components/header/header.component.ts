@@ -1,3 +1,4 @@
+import { User } from 'src/app/model/user';
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -21,11 +22,17 @@ import { AuthService } from 'src/app/services/auth.service';
   ]
 })
 export class HeaderComponent {
-  
+  user: User = new User();
   @Output() headerClick = new EventEmitter<string>();
 
   constructor(private navCtrl: NavController, private authService: AuthService) { 
     addIcons({ logOutOutline, qrCodeOutline });
+    this.authService.authUser.subscribe((user) => {
+      console.log('User:', user);
+      if (user) {
+        this.user = user;
+      }
+    });
   }
 
   sendClickEvent(buttonName: string) {

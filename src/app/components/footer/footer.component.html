@@ -10,7 +10,7 @@
         {{ "HomePage.Button.Wellcome" | translate }}
       </ion-segment-button>
 
-      <ion-segment-button value="miclase">
+      <ion-segment-button *ngIf="user.role === 'user'" value="miclase">
         <ion-icon name="desktop-outline"></ion-icon>
         {{ "HomePage.Button.class" | translate }}
       </ion-segment-button>
