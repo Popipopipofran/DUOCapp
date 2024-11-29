@@ -46,4 +46,29 @@ describe('Prueba de inicio y cierre de sesión', () => {
       expect(authUser).to.be.null;
     });
   });
+
+  it('Debería mostrar un error y permanecer en la página de inicio de sesión al ingresar credenciales incorrectas', () => {
+    // Visitar la página de inicio de sesión
+    cy.visit('/login');
+
+    // Ingresar el correo y la contraseña
+    cy.get('ion-input[name="correo"] input').type('wrong');
+    cy.get('ion-input[name="password"] input').type('wrong');
+
+    // Hacer clic en el botón de inicio de sesión
+    cy.get('ion-button#login-button').should('be.visible').and('not.be.disabled').click();
+
+    // Verificar que la URL sigue siendo /login
+    cy.url().should('include', '/login');
+
+    // Verificar que se muestra el mensaje de error
+    cy.wait(100);
+    cy.get('ion-toast').shadow().find('.toast-message').should('contain', 'El correo o la password son incorrectos');
+
+    // **Opcional**: Verificar que el usuario no se ha guardado en el almacenamiento local
+    cy.window().then((window) => {
+      const authUser = window.localStorage.getItem('AUTHENTICATED_USER');
+      expect(authUser).to.be.null;
+    });
+  });
 });
