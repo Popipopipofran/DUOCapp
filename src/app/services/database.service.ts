@@ -318,7 +318,7 @@ export class DatabaseService {
     }
   }
 
-  private rowToUser(row: any): User {
+  public rowToUser(row: any): User {
     try {
       const user = new User();
       user.userName = row.userName;
