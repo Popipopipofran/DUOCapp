@@ -103,7 +103,7 @@ export class AuthService {
         await this.router.navigate(['/home']);
         return true;
       } else {
-        showToast('El correo o la password son incorrectos', 15000);
+        showToast('El correo o la contraseña son incorrectos', 15000);
         await this.router.navigate(['/login']);
         return false;
       }

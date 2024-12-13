@@ -9,7 +9,7 @@
     <div slot="end" class="ion-margin">
       <ion-button color="warning" shape="round" size="small" (click)="navigateTheme()">
         {{ 'Theme' | translate }}
-        <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+        <ion-icon slot="start" ></ion-icon>
       </ion-button>
     </div>
    </ion-toolbar>
@@ -37,6 +37,7 @@
       
       <ion-item class="margin-bottom-6 float-left-landscape">
         <ion-input 
+          id="correo"
           label="{{ 'Login.Label.Email' | translate }}" 
           labelPlacement="floating"
           name="correo"
@@ -47,6 +48,7 @@
 
       <ion-item class="margin-bottom-6 float-right-landscape">
         <ion-input 
+          id="password"
           label="{{ 'Login.Label.Password' | translate }}"
           labelPlacement="floating"
           name="password"
@@ -74,11 +76,11 @@
     {{ 'Login.Button.GoDuoc' | translate }}
   </ion-button>
 
-  <ion-button color="primary" shape="block" (click)="passwordRecovery()">
+  <ion-button id="o_password" color="primary" shape="block" (click)="passwordRecovery()">
     {{ 'Login.Button.ForgotPassword' | translate }}
   </ion-button>
 
-  <ion-button color="primary" shape="block" (click)="register()">
+  <ion-button id="registrar" color="primary" shape="block" (click)="register()">
     {{ 'Login.Button.RegisterButton' | translate }}
   </ion-button>
 

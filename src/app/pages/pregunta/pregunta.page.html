@@ -26,13 +26,13 @@
     </ion-label>
     <ion-card-subtitle>{{ usuario?.secretQuestion || 'Pregunta no disponible' }}</ion-card-subtitle>    
     <ion-item>
-      <ion-label position="floating">{{ 'ForgotPassword2.EnterAnswer' | translate }}</ion-label>
+      <ion-label  position="floating">{{ 'ForgotPassword2.EnterAnswer' | translate }}</ion-label>
       <br>
-      <ion-input type="text" [(ngModel)]="respuesta" [placeholder]="'ForgotPassword2.Placeholder.Answer' | translate"></ion-input>
+      <ion-input id="res" type="text" [(ngModel)]="respuesta" [placeholder]="'ForgotPassword2.Placeholder.Answer' | translate"></ion-input>
     </ion-item>
     <ion-row>
       <ion-col size="12"> 
-        <ion-button expand="full" (click)="validarRespuestaSecreta()"> {{ 'ForgotPassword2.Button.ValidateAnswer' | translate }} </ion-button>
+        <ion-button id="boton_respuesta" expand="full" (click)="validarRespuestaSecreta()"> {{ 'ForgotPassword2.Button.ValidateAnswer' | translate }} </ion-button>
       </ion-col>
     </ion-row>
   </ion-card>

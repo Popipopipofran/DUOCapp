@@ -9,7 +9,7 @@
     <div slot="end" class="ion-margin">
       <ion-button color="warning" shape="round" size="small" (click)="navigateTheme()">
         {{ 'Theme' | translate }}
-        <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+        <ion-icon slot="start" ></ion-icon>
       </ion-button>
     </div>
    </ion-toolbar>
@@ -37,6 +37,7 @@
       
       <ion-item>
         <ion-input 
+          id="email"
           label="Correo" 
           labelPlacement="floating"
           [(ngModel)]="user.email" 
@@ -45,6 +46,7 @@
       </ion-item>
       <ion-item>
         <ion-input 
+          id="username"
           label="username" 
           labelPlacement="floating"
           [(ngModel)]="user.userName" 
@@ -53,6 +55,7 @@
       </ion-item>
       <ion-item>
         <ion-input 
+          id="nombre"
           label="Nombre" 
           labelPlacement="floating"
           [(ngModel)]="user.firstName" 
@@ -61,6 +64,7 @@
       </ion-item>
       <ion-item>
         <ion-input 
+          id="apellido"
           label="Apellido" 
           labelPlacement="floating"
           [(ngModel)]="user.lastName" 
@@ -69,6 +73,7 @@
       </ion-item>
       <ion-item>
         <ion-input 
+          id="direccion"
           label="Dirección" 
           labelPlacement="floating"
           [(ngModel)]="user.address" 
@@ -76,10 +81,10 @@
         </ion-input>
       </ion-item>
       <ion-item>
-        <ion-select name="nivelEducacional" label="Educación" labelPlacement="floating"
+        <ion-select id="nivelEducacional" name="nivelEducacional" label="Educación" labelPlacement="floating"
             [(ngModel)]="idNivelEducacional"
             (ngModelChange)="cambiarNivelEducacional($event)">
-          <ion-select-option *ngFor="let nivelEducacional of nivelesEducacionales" 
+          <ion-select-option id="seleccionar" *ngFor="let nivelEducacional of nivelesEducacionales" 
             [value]="nivelEducacional.id">
               {{nivelEducacional.nombre}}
           </ion-select-option>
@@ -88,6 +93,7 @@
 
       <ion-item>
         <ion-input 
+          id="pass"
           label="Contraseña"
           labelPlacement="floating"
           [(ngModel)]="user.password" 
@@ -97,6 +103,7 @@
       </ion-item>
       <ion-item>
         <ion-input 
+          id="re_password"
           label="Repetir Contraseña"
           labelPlacement="floating"
           [(ngModel)]="password2" 
@@ -106,6 +113,7 @@
       </ion-item>
       <ion-item>
         <ion-input 
+          id="Pregunta"
           label="Pregunta secreta"
           labelPlacement="floating"
           [(ngModel)]="user.secretQuestion"
@@ -114,6 +122,7 @@
       </ion-item>
       <ion-item>
         <ion-input 
+          id="respuesta"
           label="Respuesta secreta"
           labelPlacement="floating"
           [(ngModel)]="user.secretAnswer"
@@ -127,7 +136,7 @@
         <ion-input (click)="toggleCalendar()" type="text" disabled >{{ user.dateOfBirth | date:'dd-MM-yyyy' }}</ion-input> <!-- Fecha en formato dd-mm-yyyy -->
       </ion-item>
       <div class="ion-text-center margin-top-6" style="clear: both;">
-        <ion-button class="enter-button normal-text" shape="round" (click)="registerNewUser()">
+        <ion-button id="registrarse" class="enter-button normal-text" shape="round" (click)="registerNewUser()">
           {{ 'Register.Button.Register' | translate }}
         </ion-button>
       </div>
